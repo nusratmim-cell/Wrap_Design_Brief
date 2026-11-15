@@ -112,6 +112,10 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .p-ribbon{font-family:var(--f-bn);font-weight:700;font-size:11px;color:#7a5600;background:var(--gold-soft);border:1px solid #EBD79A;border-radius:999px;padding:3px 10px}
 .p-cta{font-family:var(--f-bn);font-size:11px;font-weight:700;color:#fff;background:var(--blue);border-radius:8px;padding:5px 13px}
 .p-ava{width:46px;height:46px;border-radius:50%;background:var(--navy-soft);display:flex;align-items:center;justify-content:center;font-size:21px}
+.p-ava.sm{width:30px;height:30px;font-size:13px;font-family:var(--f-bn);font-weight:700;color:var(--navy)}
+.p-id{display:flex;align-items:center;gap:8px;align-self:stretch;justify-content:center}
+.p-id .nm{font-family:var(--f-bn);font-weight:700;font-size:13px;color:var(--ink)}
+.p-photo{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#C9D0EC,#9FA9D8);display:flex;align-items:center;justify-content:center;font-size:15px}
 .p-rows{width:100%;display:flex;flex-direction:column;gap:5px;margin-top:3px}
 .p-row{display:flex;justify-content:space-between;font-family:var(--f-bn);font-size:11px;color:var(--ink-2);border-bottom:1px dashed var(--line);padding-bottom:3px}
 /* dropped tile */
@@ -119,6 +123,20 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .drop-i{font-size:24px;color:var(--ink-3)}
 .drop-t{font-family:var(--f-bn);font-size:12.5px;font-weight:600;color:var(--ink-2)}
 .drop-s{font-size:9.5px;color:var(--ink-3);letter-spacing:.07em;text-transform:uppercase;font-weight:700}
+.phone.skip{background:#FBF6EE;border-color:#EAD9C2}
+.phone.skip .drop-i,.phone.skip .drop-t{color:var(--amber)}
+/* marksheet: two artifacts, private vs public */
+.twoart{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:16px}
+.ta{border:1px solid var(--line);border-radius:14px;padding:13px;background:var(--sheet)}
+.ta.priv{border-color:#C7CEE8;background:#FBFCFE}
+.ta.pub{border-color:#E7C9DC;background:#FDF8FB}
+.ta-h{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.ta-tag{font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.ta-priv{background:var(--navy-soft);color:var(--navy)} .ta-pub{background:var(--magenta-soft);color:var(--magenta)}
+.ta-h .who{font-size:12px;color:var(--ink-2);font-weight:600}
+.ta-cap{font-size:11.5px;color:var(--ink-2);margin-top:10px;line-height:1.45}
+.ta-cap b{color:var(--ink);font-weight:600}
+.ta.pub .ta-cap b{color:var(--magenta)}
 /* caption under each tier */
 .st-cap{font-size:11.5px;color:var(--ink-2);margin-top:11px;line-height:1.45}
 .st-cap b{color:var(--ink);font-weight:600}
@@ -149,6 +167,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .hb-note b{color:var(--ink)}
 @media (max-width:760px){
   .states3{grid-template-columns:1fr}
+  .twoart{grid-template-columns:1fr}
   .homebanner{gap:14px}.hb-cta{width:100%;text-align:center}
   .legends{grid-template-columns:1fr}
   .tiers{grid-template-columns:1fr}
@@ -173,7 +192,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="lh">The three students — compared on every screen</div>
       <div class="k"><span class="st-chip c-best">Best</span><span><b style="color:var(--ink)">আরিফ</b> — very active all year. Sees the full, richest version.</span></div>
       <div class="k"><span class="st-chip c-good">Good</span><span><b style="color:var(--ink)">নিশাত</b> — a solid, typical student. Sees a strong, normal version.</span></div>
-      <div class="k"><span class="st-chip c-low">Low</span><span><b style="color:var(--ink)">রাফি</b> — very little activity. This column shows the drops &amp; fallbacks.</span></div>
+      <div class="k"><span class="st-chip c-low">Low</span><span><b style="color:var(--ink)">রাফি</b> — little activity. We keep it <b>encouraging</b>, never empty — this column shows the warm low-state.</span></div>
     </div>
     <div class="legend">
       <div class="lh">Element importance — in the line above the three</div>
@@ -212,7 +231,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 
   <div class="iblock">
     <h3>What it is</h3>
-    <p>A short, personal, tap-through story — a Shikho <span class="bn">খাতা</span> (notebook) — that plays a student their own 2026: how much they studied, how regularly they showed up, how they practised, and finally what kind of learner they are. It ends on a marksheet they can share. 12 screens exist; each student sees a curated <b>7–8</b>, because the order is server-driven and thin screens drop.</p>
+    <p>A short, personal, tap-through story — a Shikho <span class="bn">খাতা</span> (notebook) — that plays a student their own 2026: how much they studied, how regularly they showed up, how they practised, and finally what kind of learner they are. It ends on a marksheet they can share. 12 screens exist; each student sees a curated <b>7–8</b>, because the order is server-driven and a slide with no real data to show is quietly left out.</p>
   </div>
 
   <div class="iblock">
@@ -221,16 +240,19 @@ h1,h2,h3{margin:0;text-wrap:balance}
     <div class="tiers">
       <div class="tcard"><div class="tn"><span class="st-chip c-best">Best</span>আরিফ</div><p>Very active all year → the complete story, every secondary element, real badges, maybe the rare capstone.</p></div>
       <div class="tcard"><div class="tn"><span class="st-chip c-good">Good</span>নিশাত</div><p>A solid, typical student → a strong, normal version. Core elements present; a secondary element may be missing.</p></div>
-      <div class="tcard"><div class="tn"><span class="st-chip c-low">Low</span>রাফি</div><p>Very little activity → this is where screens <b>drop</b> or fall back. The clearest place to read every edge case.</p></div>
+      <div class="tcard"><div class="tn"><span class="st-chip c-low">Low</span>রাফি</div><p>Little activity → we keep it <b>warm and encouraging</b> (“শুরুটা দারুণ — শেখা চালিয়ে যাও”). Real-but-small numbers still show; only a near-empty metric is skipped. The clearest place to read the edge cases.</p></div>
     </div>
   </div>
 
   <div class="iblock">
     <h3>The one rule</h3>
-    <p>We call it a marksheet, but it must <b>never feel like an exam result sheet</b>. Lead with effort, never show a weak number to shame anyone, and give the lowest-activity students a kind Fresh Start instead of empty stats. Every student finishes proud.</p>
+    <p>We call it a marksheet, but it must <b>never feel like an exam result sheet</b>. Lead with effort, never show a weak number to shame anyone, and keep every low-state <b>positively framed</b>. Every student finishes proud.</p>
   </div>
 
-  <div class="note"><b>Golden rule:</b> if the data for a screen isn’t there, the screen is <b>dropped</b> — never shown empty, never “0”, never filler. That is exactly what the <span style="color:var(--amber);font-weight:700">Low</span> column shows on each screen.</div>
+  <div class="note"><b>How low data works — encourage first, drop only when truly empty:</b><br>
+  <b>1. Low but real</b> (e.g. ৩৮ ঘণ্টা, ৬ classes) → <b>keep the screen</b>, use warm copy, no badge it didn’t earn. <br>
+  <b>2. Essentially empty</b> (a metric below its <span class="bn">min_show</span> — e.g. a 2-minute video) → skip <b>just that one slide</b>; the rest of the Wrap still plays. Never “0”, never an empty chart.<br>
+  <b>3. A whole quiet year</b> (under 5 active days) → the kind 2-slide <b>Fresh Start</b> deck. Nobody who paid is left out.</div>
   <div class="foot"><a href="#top">↑ Back to contents</a></div>
 </div>
 
@@ -293,8 +315,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="phone"><div class="p-eyebrow">এই বছর তুমি পড়েছ</div><div class="p-big">১৪২</div><div class="p-unit">ঘণ্টা</div><div class="p-eyebrow">প্রায় ২৪টি ৬ ঘণ্টার দিনের সমান!</div></div>
       <div class="st-cap">A solid number, shown plainly. No over-praise.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone drop"><div class="drop-i">⊘</div><div class="drop-t">এই স্ক্রিন দেখানো হয় না</div><div class="drop-s">Screen dropped</div></div>
-      <div class="st-cap">Studied only a few hours → <b>below the threshold, so the whole screen is dropped</b>. Never a dressed-up low number, never “0”.</div></div>
+      <div class="phone"><div class="p-eyebrow">এই বছর তুমি পড়েছ</div><div class="p-big">৩৮</div><div class="p-unit">ঘণ্টা</div><div class="p-eyebrow">শুরুটা দারুণ — শেখা চালিয়ে যাও!</div></div>
+      <div class="st-cap"><b>Kept &amp; encouraged.</b> A small but real number, shown warmly (“শুরুটা দারুণ”), no over-praise. Only if it’s essentially nothing (below <span class="bn">min_show</span>) is this one slide skipped.</div></div>
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s3">Next → Attendance</a></div>
 </div>
@@ -314,8 +336,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="phone"><div class="p-eyebrow">লাইভ ক্লাসে উপস্থিতি</div><div class="p-big">৪৮</div><div class="p-unit">টি ক্লাস</div><div class="p-ribbon">🎀 নিয়মিত উপস্থিতি</div></div>
       <div class="st-cap">Strong count + a gentler ribbon she earned.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone"><div class="p-eyebrow">লাইভ ক্লাসে উপস্থিতি</div><div class="p-big">৬</div><div class="p-unit">টি ক্লাস</div></div>
-      <div class="st-cap"><b>No ribbon</b> — never give “ফার্স্ট বেঞ্চার” to someone who didn’t earn it. <b>Zero classes → drop the screen</b>, never show “0”.</div></div>
+      <div class="phone"><div class="p-eyebrow">লাইভ ক্লাসে উপস্থিতি</div><div class="p-big">৬</div><div class="p-unit">টি ক্লাস</div><div class="p-eyebrow">নিয়মিত হতে চেষ্টা চালিয়ে যাও!</div></div>
+      <div class="st-cap"><b>Kept &amp; encouraged</b> — real count + a warm line, <b>no badge it didn’t earn</b>. Only skipped if fewer than 5 classes were even held (too few to mean anything), never shown as “0”.</div></div>
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s4">Next → Teacher</a></div>
 </div>
@@ -335,8 +357,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="phone"><div class="p-eyebrow">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="p-name">রাহেলা ম্যাম</div></div>
       <div class="st-cap"><b>Name only</b> (no portrait on file) still works fine.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone drop"><div class="drop-i">⊘</div><div class="drop-t">এই স্ক্রিন দেখানো হয় না</div><div class="drop-s">Screen dropped</div></div>
-      <div class="st-cap">No reliable teacher record → <b>drop the screen</b>. Whole screen also carries a launch dependency — confirm before treating it as shipping.</div></div>
+      <div class="phone skip"><div class="drop-i">⤳</div><div class="drop-t">এই স্লাইডটি বাদ</div><div class="drop-s">This slide skipped</div></div>
+      <div class="st-cap">No reliable teacher on record → we won’t guess, so <b>just this one slide is skipped</b> — রাফি still sees his other screens. This screen also carries a launch dependency — confirm before shipping.</div></div>
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s5">Next → Quiz</a></div>
 </div>
@@ -357,7 +379,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="st-cap">Solid count. Nudge only if she were genuinely close.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
       <div class="phone"><div class="p-eyebrow">কুইজে শুরুটা হয়ে গেছে</div><div class="p-big">৪</div><div class="p-unit">টি কুইজ</div><div class="p-eyebrow">আগামী বছর আরও এগিয়ে যাও!</div></div>
-      <div class="st-cap">A kind, encouraging line — <b>never an empty chart</b>. Zero quizzes → the screen drops instead.</div></div>
+      <div class="st-cap"><b>Kept &amp; encouraged</b> — a kind line, <b>never an empty chart</b>. A near-milestone nudge only if genuinely close. If there were truly zero quizzes, just this slide is skipped.</div></div>
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s6">Next → Video</a></div>
 </div>
@@ -377,8 +399,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="phone"><div class="p-eyebrow">ভিডিও দেখে শিখেছ</div><div class="p-big">৯৬০</div><div class="p-unit">মিনিট</div><div class="p-eyebrow">🎬 প্রায় ৮টি সিনেমার সমান!</div></div>
       <div class="st-cap">Strong watch time + comparison.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone drop"><div class="drop-i">⊘</div><div class="drop-t">মাত্র ২ মিনিট — স্ক্রিন বাদ</div><div class="drop-s">Screen dropped</div></div>
-      <div class="st-cap"><b>Watched only 2 minutes → below the threshold, so the whole screen is dropped.</b> A “2 min” screen never ships, and we never show “0 মিনিট”.</div></div>
+      <div class="phone skip"><div class="drop-i">⤳</div><div class="drop-t">মাত্র ২ মিনিট — এই স্লাইডটি বাদ</div><div class="drop-s">This slide skipped</div></div>
+      <div class="st-cap"><b>Watched only 2 minutes → below the minimum to be meaningful, so only this one slide is skipped</b> (never “0 মিনিট”). রাফি is <b>not</b> dropped from the Wrap — he still sees his other screens and the warm close.</div></div>
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s7">Next → Strongest subject</a></div>
 </div>
@@ -398,8 +420,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="phone"><div class="p-eyebrow">তোমার বছরের বিষয়</div><div class="p-name" style="color:#6070E9">পদার্থবিজ্ঞান</div><div class="p-eyebrow">এই বিষয়েই সবচেয়ে বেশি সময়</div></div>
       <div class="st-cap">Clear top subject. Secondary list optional.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone drop"><div class="drop-i">⊘</div><div class="drop-t">এই স্ক্রিন দেখানো হয় না</div><div class="drop-s">Screen dropped</div></div>
-      <div class="st-cap">Activity too thin, or a tie between subjects → <b>drop the screen rather than guess</b>. Never read as a performance rank.</div></div>
+      <div class="phone skip"><div class="drop-i">⤳</div><div class="drop-t">এই স্লাইডটি বাদ</div><div class="drop-s">This slide skipped</div></div>
+      <div class="st-cap">No reliable top subject, or a tie → we <b>skip just this slide rather than guess</b> (never a performance rank). The rest of his Wrap still plays.</div></div>
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s8">Next → Biggest day</a></div>
 </div>
@@ -419,8 +441,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="phone"><div class="p-eyebrow">তোমার বছরের সেরা দিন</div><div class="p-name">১৪ মার্চ</div><div class="p-eyebrow">এই দিনেই সবচেয়ে বেশি সময়</div></div>
       <div class="st-cap">Clear peak date. Time figure optional.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone drop"><div class="drop-i">⊘</div><div class="drop-t">এই স্ক্রিন দেখানো হয় না</div><div class="drop-s">Screen dropped</div></div>
-      <div class="st-cap">No clear peak (flat or almost-no activity) → <b>drop the screen cleanly</b>.</div></div>
+      <div class="phone skip"><div class="drop-i">⤳</div><div class="drop-t">এই স্লাইডটি বাদ</div><div class="drop-s">This slide skipped</div></div>
+      <div class="st-cap">No single stand-out day (flat or very thin activity) → <b>skip just this slide</b>. He still sees his other, warmer screens.</div></div>
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s9">Next → Learner type</a></div>
 </div>
@@ -440,8 +462,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div class="phone"><div class="p-eyebrow">তোমার শেখার ধরন</div><div class="p-stamp">নিয়মিত পড়ুয়া</div><div class="p-eyebrow">সারা বছর নিয়ম করে পড়েছ</div></div>
       <div class="st-cap">Every type feels equally good — none looks “better”.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone drop"><div class="drop-i">⊘</div><div class="drop-t">এই স্ক্রিন দেখানো হয় না</div><div class="drop-s">Not typed</div></div>
-      <div class="st-cap"><b>Fresh-Start students aren’t typed</b> → they skip this and get the Fresh Start deck. Build 5 states: pre-reveal, reveal, revealed, repeat-view, fallback. Must work with motion off.</div></div>
+      <div class="phone"><div class="p-eyebrow">তোমার শেখার ধরন</div><div class="p-stamp">ভারসাম্যপূর্ণ</div><div class="p-eyebrow">তোমার জন্য আছে একটি পরিচয়</div></div>
+      <div class="st-cap"><b>Never blank</b> — if the type can’t be resolved, fall back to a <b>safe default</b> (“ভারসাম্যপূর্ণ”). Only the truly inactive (&lt;5 days) skip this and get Fresh Start. Build 5 states: pre-reveal, reveal, revealed, repeat-view, fallback. Works with motion off.</div></div>
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s10">Next → Marksheet</a></div>
 </div>
@@ -453,18 +475,29 @@ h1,h2,h3{margin:0;text-wrap:balance}
     <div class="grp"><span class="tagx tx-pri">Primary</span><span class="l2"><b>২০২৬ + Shikho + learner-type</b>, the core highlight rows, a share button.</span></div>
     <div class="grp"><span class="tagx tx-sec">Secondary</span><span class="l2">Best subject · badges · loyalty — rows with no data are simply omitted.</span></div>
   </div>
+  <div style="margin-top:14px;font-size:13.5px;color:var(--ink);font-weight:600">The three students — the <span style="color:var(--navy)">private in-app card</span> each one sees (name + photo shown here):</div>
   <div class="states3">
     <div class="st st-best"><div class="st-h"><span class="st-chip c-best">Best</span><span class="nm">আরিফ</span></div>
-      <div class="phone start"><div class="p-eyebrow">তোমার ২০২৬, এক খাতায়</div><div class="p-stamp" style="font-size:12px;transform:none">একনিষ্ঠ</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>২১০ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৬০টি</span></div><div class="p-row"><span>ব্যাজ</span><span>🏅 সেরার সেরা</span></div></div><div class="p-cta">শেয়ার করো</div></div>
-      <div class="st-cap">Full card: type + all rows + the rare capstone badge.</div></div>
+      <div class="phone start"><div class="p-id"><span class="p-photo">🧑🏽</span><span class="nm">আরিফ</span></div><div class="p-stamp" style="font-size:12px;transform:none">একনিষ্ঠ</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>২১০ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৬০টি</span></div><div class="p-row"><span>ব্যাজ</span><span>🏅 সেরার সেরা</span></div></div><div class="p-cta">শেয়ার করো</div></div>
+      <div class="st-cap">Full card: photo + name + type + all rows + the rare capstone.</div></div>
     <div class="st st-good"><div class="st-h"><span class="st-chip c-good">Good</span><span class="nm">নিশাত</span></div>
-      <div class="phone start"><div class="p-eyebrow">তোমার ২০২৬, এক খাতায়</div><div class="p-stamp" style="font-size:12px;transform:none">নিয়মিত পড়ুয়া</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৪৮টি</span></div><div class="p-row"><span>বিষয়</span><span>পদার্থবিজ্ঞান</span></div></div><div class="p-cta">শেয়ার করো</div></div>
-      <div class="st-cap">Core rows + type. No capstone (not earned).</div></div>
+      <div class="phone start"><div class="p-id"><span class="p-photo">👧🏽</span><span class="nm">নিশাত</span></div><div class="p-stamp" style="font-size:12px;transform:none">নিয়মিত পড়ুয়া</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৪৮টি</span></div><div class="p-row"><span>বিষয়</span><span>পদার্থবিজ্ঞান</span></div></div><div class="p-cta">শেয়ার করো</div></div>
+      <div class="st-cap">Photo + name + core rows + type. No capstone (not earned).</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone start"><div class="p-eyebrow">তোমার ২০২৬, এক খাতায়</div><div class="p-rows"><div class="p-row"><span>ক্লাস</span><span>৬টি</span></div><div class="p-row"><span>কুইজ</span><span>৪টি</span></div></div><div class="p-cta">শেয়ার করো</div></div>
-      <div class="st-cap"><b>Empty rows are dropped</b>, not shown as “--” here. The truly minimal (Fresh Start) student gets no marksheet at all.</div></div>
+      <div class="phone start"><div class="p-id"><span class="p-photo">🧒🏽</span><span class="nm">রাফি</span></div><div class="p-stamp" style="font-size:12px;transform:none">ভারসাম্যপূর্ণ</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>৩৮ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৬টি</span></div></div><div class="p-cta">শেয়ার করো</div></div>
+      <div class="st-cap"><b>Still gets a card</b> — photo, name, a default type, and only the rows that have data (empty rows omitted, never “--”). He still finishes proud.</div></div>
   </div>
-  <div class="note" style="margin-top:16px"><b>Always:</b> the <b>shared image hides the name by default</b> — no school, photo or rank (many are minors). The name shows only in the private in-app view. Capture at a fixed 1080×1920.</div>
+
+  <div style="margin-top:18px;font-size:13.5px;color:var(--ink);font-weight:600">Two separate artifacts — the picture rule lives here:</div>
+  <div class="twoart">
+    <div class="ta priv"><div class="ta-h"><span class="ta-tag ta-priv">In-app card</span><span class="who">private · only the student</span></div>
+      <div class="phone start" style="max-width:220px;margin:0 auto"><div class="p-id"><span class="p-photo">👧🏽</span><span class="nm">নিশাত</span></div><div class="p-stamp" style="font-size:12px;transform:none">নিয়মিত পড়ুয়া</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৪৮টি</span></div></div></div>
+      <div class="ta-cap"><b>Photo + name are allowed here.</b> This is the keepsake a student sees inside the app — it never leaves their phone unless they choose to share.</div></div>
+    <div class="ta pub"><div class="ta-h"><span class="ta-tag ta-pub">Shared image</span><span class="who">public link · anyone can open</span></div>
+      <div class="phone start" style="max-width:220px;margin:0 auto"><div class="p-eyebrow">আমার ২০২৬ · শিখো</div><div class="p-stamp" style="font-size:12px;transform:none">নিয়মিত পড়ুয়া</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৪৮টি</span></div></div></div>
+      <div class="ta-cap"><b>No photo, no name, no school, no rank — by default.</b> The share link is public and most students are minors, so the exported card leads with the learner-type and effort, not the person. Captured at a fixed 1080×1920; the link is revocable on request.</div></div>
+  </div>
+  <div class="note" style="margin-top:16px"><b>Why the split:</b> the PRD fixes this for child-safety — the public URL is treated as PII-exposing. So we keep the warm, personal card (with the photo) <b>inside the app</b>, and make the <b>shareable</b> one identity-safe by default. A student can still turn their name on for a share if they choose.</div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s11">Next → See you in 2027</a></div>
 </div>
 
@@ -533,11 +566,13 @@ h1,h2,h3{margin:0;text-wrap:balance}
 <div class="sheet" id="end">
   <div class="s-top"><span class="s-num" style="background:var(--green)">✓</span><div class="s-ttl"><h2>Rules for every screen</h2><p class="s-purpose">A few things true everywhere, so no single screen has to reinvent them.</p></div></div>
 
-  <h3 style="font-family:var(--f-disp);font-size:16px;color:var(--navy);margin-top:22px">What to do when data is missing or looks wrong</h3>
-  <p style="font-size:13.5px;color:var(--ink-2);margin:4px 0 0">These apply to every screen. Read each row left to right: the thing you might run into, then exactly what to do about it.</p>
+  <h3 style="font-family:var(--f-disp);font-size:16px;color:var(--navy);margin-top:22px">When data is low or missing — encourage first, skip only when truly empty</h3>
+  <p style="font-size:13.5px;color:var(--ink-2);margin:4px 0 0">The point is never to shame and never to lie. Read each row left to right: the situation, then exactly what to do.</p>
   <div class="rtbl">
     <div class="rtr rhead"><div>If this happens</div><div>Do this</div></div>
-    <div class="rtr"><div class="c-if">A metric has no data</div><div class="c-do">Drop that whole screen. Don’t show it empty or padded with filler.</div></div>
+    <div class="rtr"><div class="c-if">A number is <b>low but real</b> (e.g. 38 hrs, 6 classes)</div><div class="c-do"><b>Keep the screen.</b> Use the warm, encouraging copy (“শুরুটা দারুণ — শেখা চালিয়ে যাও”). No badge it didn’t earn, no over-praise.</div></div>
+    <div class="rtr"><div class="c-if">A metric is <b>essentially empty</b> — below its <span class="bn">min_show</span> (e.g. a 2-min video, &lt;5 classes held, no reliable subject)</div><div class="c-do">Skip <b>just that one slide</b>. The rest of the Wrap still plays. Never an empty chart.</div></div>
+    <div class="rtr"><div class="c-if">The student had <b>under 5 active days</b> all year</div><div class="c-do">Serve the kind 2-slide <b>Fresh Start</b> deck. Nobody who paid is left out.</div></div>
     <div class="rtr"><div class="c-if">A number comes back as 0 or blank</div><div class="c-do">Print <b>“--”</b>, never a bare <b>“0”</b>.</div></div>
     <div class="rtr"><div class="c-if">The student’s name is missing</div><div class="c-do">Use the generic headline. Never print <b>“null”</b> or a blank space.</div></div>
     <div class="rtr"><div class="c-if">The name is very long</div><div class="c-do">Wrap it, or trim near ~18 characters. It must never overflow the layout.</div></div>
