@@ -197,7 +197,7 @@ a{color:var(--navy);text-decoration:none}
     <p class="sdesc">The home-screen banner that starts the Wrap. <b>The same for everyone</b> — no Best/Good/Low here; it just has to be inviting enough to tap.</p>
     <div class="shows"><div><span class="pr">● Primary</span> — identity + one button + one-time “new” cue</div><div><span class="sc">○ Secondary</span> — the name (never a number)</div></div>
     <div style="max-width:300px;margin:16px auto 0"><div class="phone"><div class="scr"><div class="banner"><div class="be">✨ নতুন · Wrap ২০২৬</div><div class="bt">নিশাত, তোমার ২০২৬-এর খাতা তৈরি!</div></div><div class="cta">আমার খাতা দেখি →</div></div></div></div>
-    <div class="note"><b>Two cases to handle here:</b><br>• If the student <b>hasn’t paid</b>, don’t show the banner at all — they aren’t eligible for the Wrap.<br>• If they’ve paid but their Wrap <b>isn’t ready yet</b>, still show the banner — but tapping it opens a small <span class="bn">“শীঘ্রই আসছে”</span> (coming soon) sheet instead of the Wrap.</div>
+    <div class="note"><b>To design:</b> the <span class="bn">“শীঘ্রই আসছে”</span> (coming-soon) sheet — shown when a student taps the banner before their Wrap is ready. <span style="opacity:.8">Who sees the banner at all is decided by the backend from paid status — not a design task.</span></div>
   </section>
 
   <!-- 01 -->
@@ -246,7 +246,7 @@ a{color:var(--navy);text-decoration:none}
       <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="ava gm">👨🏽‍🏫</div><div class="nm">করিম স্যার</div></div></div><p class="scap">No photo → a generic <b>male</b> avatar (“স্যার”).</p></div>
       <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="ava gf">👩🏽‍🏫</div><div class="nm">রুমানা ম্যাডাম</div></div></div><p class="scap">Still shown — a generic <b>female</b> avatar (“ম্যাডাম”) + name.</p></div>
     </div>
-    <div class="note">No reliable teacher record → this one slide sits out (we don’t guess a wrong face). Needs the approved-portrait set signed off before it ships.</div>
+    <div class="note">No teacher photo → the generic avatar (above). No reliable teacher at all → this one slide sits out; we never guess a wrong face.</div>
   </section>
 
   <!-- 05 -->
