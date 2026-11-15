@@ -219,7 +219,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     <div class="toc-group">Extras</div>
     <li><a href="#scap"><span class="toc-n">★</span><span class="toc-t">Rare capstone badge</span><span class="toc-d">only the Best unlock it</span></a></li>
     <li><a href="#sfresh"><span class="toc-n">◇</span><span class="toc-t">Fresh Start deck</span><span class="toc-d">the extreme-Low case</span></a></li>
-    <li><a href="#end"><span class="toc-n">✓</span><span class="toc-t">Rules for every screen</span><span class="toc-d">fallbacks &amp; colours</span></a></li>
+    <li><a href="#end"><span class="toc-n">✓</span><span class="toc-t">Rules for every screen</span><span class="toc-d">every edge case, grouped</span></a></li>
   </ol>
   <div class="foot"><span>Shikho Wrap 2026 · Screen Guide · built from the PRD Design Brief</span></div>
 </div>
@@ -565,21 +565,57 @@ h1,h2,h3{margin:0;text-wrap:balance}
 <div class="sheet" id="end">
   <div class="s-top"><span class="s-num" style="background:var(--green)">✓</span><div class="s-ttl"><h2>Rules for every screen</h2><p class="s-purpose">A few things true everywhere, so no single screen has to reinvent them.</p></div></div>
 
-  <h3 style="font-family:var(--f-disp);font-size:16px;color:var(--navy);margin-top:22px">When data is low or missing — we encourage, we don’t skip</h3>
-  <p style="font-size:13.5px;color:var(--ink-2);margin:4px 0 0">The point is never to shame and never to lie. Read each row left to right: the situation, then exactly what to do.</p>
+  <p style="font-size:14px;color:var(--ink-2);margin:4px 0 0">Everything that can differ between students lives here, grouped so no single screen has to repeat it. Read each row left to right — the situation, then exactly what to do. The thread through all of it: <b style="color:var(--ink)">every student finishes feeling proud.</b></p>
+
+  <div style="font-family:var(--f-disp);font-weight:600;font-size:15px;color:var(--green);margin-top:22px">① Low activity — always encourage, never skip</div>
   <div class="rtbl">
     <div class="rtr rhead"><div>If this happens</div><div>Do this</div></div>
-    <div class="rtr"><div class="c-if">A number is low, or even zero</div><div class="c-do"><b>Keep the screen.</b> Show a warm, forward line (“শুরুটা দারুণ — শেখা চালিয়ে যাও”). No fake badge, never a bare “0”, never an empty chart.</div></div>
-    <div class="rtr"><div class="c-if">No badge was earned</div><div class="c-do">Keep the screen and its line — just don’t show a badge. Never a fake one.</div></div>
-    <div class="rtr"><div class="c-if">The student had under 5 active days all year</div><div class="c-do">Serve the kind 2-slide <b>Fresh Start</b> deck. Nobody who paid is left out.</div></div>
-    <div class="rtr"><div class="c-if">A metric’s data is genuinely absent (no record exists at all)</div><div class="c-do">That one slide simply won’t render — we never guess or fake data. Rare, and not the normal low-activity path.</div></div>
-    <div class="rtr"><div class="c-if">A single value inside a row is missing</div><div class="c-do">Show <b>“--”</b> for that value, never a bare <b>“0”</b>.</div></div>
-    <div class="rtr"><div class="c-if">The student’s name is missing</div><div class="c-do">Use the generic headline. Never print <b>“null”</b> or a blank space.</div></div>
-    <div class="rtr"><div class="c-if">The name is very long</div><div class="c-do">Wrap it, or trim near ~18 characters. It must never overflow the layout.</div></div>
-    <div class="rtr"><div class="c-if">No badges were earned</div><div class="c-do">Hide the badge area completely. No empty shelf, no greyed placeholders.</div></div>
-    <div class="rtr"><div class="c-if">The student re-opens the Wrap</div><div class="c-do">Use the calm entry. Skip the first-time shimmer and reveal animations.</div></div>
-    <div class="rtr"><div class="c-if">A screen is still loading</div><div class="c-do">Show a notebook-style skeleton, not a spinner.</div></div>
-    <div class="rtr"><div class="c-if">The student has animations turned off</div><div class="c-do">Everything still works as a clean, static layout — nothing depends on motion.</div></div>
+    <div class="rtr"><div class="c-if">A number is low, or even zero</div><div class="c-do"><b>Keep the screen.</b> Warm, forward line (“শুরুটা দারুণ — শেখা চালিয়ে যাও”). No fake badge, never a bare “0”, never an empty chart.</div></div>
+    <div class="rtr"><div class="c-if">No badge was earned</div><div class="c-do">Keep the screen and its line; just no badge. Optional near-miss nudge: “এবার প্রায় পেয়ে গিয়েছিলে!”. Never a fake badge.</div></div>
+    <div class="rtr"><div class="c-if">The banner’s biggest number is small (e.g. 6 active days)</div><div class="c-do">Use the no-number headline (“তোমার ২০২৬-এর খাতা তৈরি!”). Never use a weak number as the hook.</div></div>
+    <div class="rtr"><div class="c-if">Under 5 active days, or fewer than 3 screens have real data</div><div class="c-do">Serve the kind 2-slide <b>Fresh Start</b> deck (“তোমার যাত্রা সবে শুরু”). Nobody who paid is left out.</div></div>
+  </div>
+
+  <div style="font-family:var(--f-disp);font-weight:600;font-size:15px;color:var(--navy);margin-top:24px">② Missing, zero or impossible data</div>
+  <div class="rtbl">
+    <div class="rtr rhead"><div>If this happens</div><div>Do this</div></div>
+    <div class="rtr"><div class="c-if">A value is 0 or absent</div><div class="c-do">Show <b>“--”</b>, never a bare <b>“0”</b>.</div></div>
+    <div class="rtr"><div class="c-if">0 classes held (divide-by-zero on the rate)</div><div class="c-do">Guard the rate to <b>“--”</b> — never a broken or NaN ring.</div></div>
+    <div class="rtr"><div class="c-if">A metric’s record is genuinely absent</div><div class="c-do">That one slide won’t render — we never guess or fake data. Rare, not the low-activity path.</div></div>
+    <div class="rtr"><div class="c-if">The name is missing, an emoji, or “null”</div><div class="c-do">Fall back to the generic headline. Never render <b>“null”</b> or a blank.</div></div>
+    <div class="rtr"><div class="c-if">The name is very long</div><div class="c-do">Trim near ~18 characters; it must never overflow the layout.</div></div>
+    <div class="rtr"><div class="c-if">Impossible data (study &gt; 24h/day, attendance &gt; 100%, negatives)</div><div class="c-do">The row is caught by the QA gate and held back until fixed — a wrong card never ships.</div></div>
+  </div>
+
+  <div style="font-family:var(--f-disp);font-weight:600;font-size:15px;color:var(--navy);margin-top:24px">③ Eligibility, timing &amp; connection</div>
+  <div class="rtbl">
+    <div class="rtr rhead"><div>If this happens</div><div>Do this</div></div>
+    <div class="rtr"><div class="c-if">Not a paid student</div><div class="c-do">No banner at all — they’re not eligible.</div></div>
+    <div class="rtr"><div class="c-if">The Wrap isn’t generated yet</div><div class="c-do">Tapping opens a <span class="bn">“শীঘ্রই আসছে”</span> (coming soon) sheet.</div></div>
+    <div class="rtr"><div class="c-if">The student re-opens the Wrap</div><div class="c-do">Calm entry — skip the first-time shimmer and reveal animations.</div></div>
+    <div class="rtr"><div class="c-if">A screen is still loading</div><div class="c-do">A notebook-style skeleton, not a spinner.</div></div>
+    <div class="rtr"><div class="c-if">The student goes offline mid-story</div><div class="c-do">Replay from cache if it’s there, otherwise a gentle retry.</div></div>
+    <div class="rtr"><div class="c-if">A nightly refresh lands while they’re mid-story</div><div class="c-do">Keep the open deck from cache; pick up new data on next open. Never swap under them.</div></div>
+    <div class="rtr"><div class="c-if">The class shows last year’s</div><div class="c-do">Use the current class snapshot.</div></div>
+  </div>
+
+  <div style="font-family:var(--f-disp);font-weight:600;font-size:15px;color:var(--magenta);margin-top:24px">④ Sharing &amp; privacy — child-safety</div>
+  <div class="rtbl">
+    <div class="rtr rhead"><div>If this happens</div><div>Do this</div></div>
+    <div class="rtr"><div class="c-if">The image is shared (default)</div><div class="c-do"><b>No name, school, photo or rank</b> — many are minors. Name &amp; photo stay only on the private in-app card.</div></div>
+    <div class="rtr"><div class="c-if">The <span class="bn">নাম-লুকাও</span> (hide-name) toggle is used</div><div class="c-do">Strip the name/school/rank layer <b>before</b> the image is captured.</div></div>
+    <div class="rtr"><div class="c-if">Capturing the share image</div><div class="c-do">A fixed <b>1080×1920</b>, never device-scaled.</div></div>
+    <div class="rtr"><div class="c-if">The link shortener is down at share time</div><div class="c-do">Still share the image + full link with a soft note — never block the share.</div></div>
+    <div class="rtr"><div class="c-if">A student asks to delete after sharing</div><div class="c-do">Delete the data and revoke the link so the public URL 404s.</div></div>
+    <div class="rtr"><div class="c-if">A card was shared, then re-generated</div><div class="c-do">The shared card stays as captured; a re-run makes a new one, never edits the old.</div></div>
+  </div>
+
+  <div style="font-family:var(--f-disp);font-weight:600;font-size:15px;color:var(--ink);margin-top:24px">Always true, for everyone</div>
+  <div class="rtbl">
+    <div class="rtr rhead"><div>If this happens</div><div>Do this</div></div>
+    <div class="rtr"><div class="c-if">The app is set to English</div><div class="c-do">The Wrap still renders in Bangla, with Bengali numerals — it’s a Bangla-first artefact.</div></div>
+    <div class="rtr"><div class="c-if">Animations are turned off</div><div class="c-do">Everything works as a clean static layout; nothing depends on motion.</div></div>
+    <div class="rtr"><div class="c-if">Any student — Best, Good, Low or Fresh Start</div><div class="c-do">Finishes feeling <b>proud</b>. Lead with effort; never shame a number.</div></div>
   </div>
 
   <h3 style="font-family:var(--f-disp);font-size:16px;color:var(--navy);margin-top:24px">Look &amp; feel</h3>
