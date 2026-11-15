@@ -182,6 +182,16 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .hb-cta{position:relative;z-index:1;font-family:var(--f-bn);font-weight:700;font-size:15px;color:var(--navy);background:#FFC93C;border-radius:11px;padding:12px 22px;white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,.18)}
 .hb-note{margin-top:13px;background:var(--sheet);border:1px solid var(--line-2);border-radius:11px;padding:12px 15px;font-size:12.5px;color:var(--ink-2);line-height:1.5}
 .hb-note b{color:var(--ink)}
+/* at-a-glance spec table */
+.gtbl{margin-top:16px;border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+.gtr{display:grid;grid-template-columns:150px 1.4fr 1fr;min-width:640px}
+.gtr>div{padding:10px 13px;font-size:12.5px;line-height:1.5;border-top:1px solid var(--line-2)}
+.gtr:first-child>div{border-top:none}
+.gtr.ghead>div{background:var(--navy);color:#fff;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border-top:none}
+.gtr .g-s{font-family:var(--f-disp);font-weight:700;color:var(--navy);background:var(--sheet);border-right:1px solid var(--line-2)}
+.gtr .g-m{border-right:1px solid var(--line-2);color:var(--ink-2)}
+.gtr .g-m b{color:var(--navy);font-weight:700}
+.gtr .g-l{color:#7a4a08;background:#FCFAF6}
 @media (max-width:760px){
   .states3{grid-template-columns:1fr}
   .twoart{grid-template-columns:1fr}
@@ -220,6 +230,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 
   <ol class="toc-list">
     <li><a href="#intro"><span class="toc-n">—</span><span class="toc-t">How to read this &amp; the 3 students</span><span class="toc-d">start here</span></a></li>
+    <li><a href="#glance"><span class="toc-n">⊞</span><span class="toc-t">Everything at a glance</span><span class="toc-d">the whole spec in one table</span></a></li>
     <div class="toc-group">The 12 screens — in order</div>
     <li><a href="#s0"><span class="toc-n">00</span><span class="toc-t">Home entry banner</span><span class="toc-d">the one tap that starts it</span></a></li>
     <li><a href="#s1"><span class="toc-n">01</span><span class="toc-t">Cover</span><span class="toc-d">“this খাতা is mine”</span></a></li>
@@ -269,7 +280,32 @@ h1,h2,h3{margin:0;text-wrap:balance}
   <div class="note"><b>How low activity works — we encourage, we don’t skip:</b><br>
   <b>1. Any real activity, even small</b> (৩৮ ঘণ্টা, ৬ classes, even ২ মিনিট of video) → <b>the screen stays</b>, with warm, forward copy (“শুরুটা দারুণ — শেখা চালিয়ে যাও”). No fake badge, never “0”, never an empty chart.<br>
   <b>2. A whole quiet year</b> (under 5 active days) → the kind 2-slide <b>Fresh Start</b> deck. Nobody who paid is left out.</div>
-  <div class="foot"><a href="#top">↑ Back to contents</a></div>
+  <div class="foot"><a href="#top">↑ Back to contents</a><a href="#glance">Next → Everything at a glance</a></div>
+</div>
+
+<!-- ============ AT A GLANCE ============ -->
+<div class="sheet" id="glance">
+  <h2 class="intro-h" style="font-size:clamp(21px,4vw,28px)">Everything at a glance</h2>
+  <p class="intro-sub">The whole thing on one page — every screen, what it must show, and how it behaves for a low-activity student. The detailed walk-through comes after.</p>
+  <div class="gtbl">
+    <div class="gtr ghead"><div>Screen</div><div>What it shows</div><div>Low-activity student</div></div>
+    <div class="gtr"><div class="g-s">00 · Home banner</div><div class="g-m"><b>Primary</b> identity + one button + one-time “new” cue · <b>Secondary</b> the name</div><div class="g-l">Same bright banner for everyone; not a paid student → no banner at all</div></div>
+    <div class="gtr"><div class="g-s">01 · Cover</div><div class="g-m"><b>Primary</b> name, ২০২৬, notebook identity · <b>Secondary</b> class &amp; group</div><div class="g-l">Name still the hero; a missing class line just drops</div></div>
+    <div class="gtr"><div class="g-s">02 · Study time</div><div class="g-m"><b>Primary</b> total hours (big) + warm line · <b>Secondary</b> “6-hour-day” comparison</div><div class="g-l">Small real number + “শুরুটা দারুণ” — never a “0”</div></div>
+    <div class="gtr"><div class="g-s">03 · Attendance</div><div class="g-m"><b>Primary</b> classes attended + held · <b>Secondary</b> an earned ribbon</div><div class="g-l">Real count, no unearned ribbon; never a “0”</div></div>
+    <div class="gtr"><div class="g-s">04 · Teacher</div><div class="g-m"><b>Primary</b> teacher name + warm line · <b>Secondary</b> avatar: photo → generic M/F → name</div><div class="g-l">Shown; a generic male/female avatar if no photo</div></div>
+    <div class="gtr"><div class="g-s">05 · Quiz</div><div class="g-m"><b>Primary</b> quizzes done + honest line · <b>Secondary</b> a monthly chart</div><div class="g-l">A kind line even at zero; never an empty chart</div></div>
+    <div class="gtr"><div class="g-s">06 · Video</div><div class="g-m"><b>Primary</b> total watch time · <b>Secondary</b> movies comparison + badge</div><div class="g-l">2 minutes shown quietly + “শুরুটা হয়ে গেছে”</div></div>
+    <div class="gtr"><div class="g-s">07 · Subject</div><div class="g-m"><b>Primary</b> top subject + “most active” · <b>Secondary</b> the next 1–2 subjects</div><div class="g-l">His most-active subject — about focus, not a rank</div></div>
+    <div class="gtr"><div class="g-s">08 · Biggest day</div><div class="g-m"><b>Primary</b> the date + “most-active day” · <b>Secondary</b> time that day</div><div class="g-l">Still has a biggest day; no comparison, no pressure</div></div>
+    <div class="gtr"><div class="g-s">09 · Learner type ★</div><div class="g-m"><b>Primary</b> type stamp + a real reason · <b>Secondary</b> streak as support</div><div class="g-l">Safe default type (“ভারসাম্যপূর্ণ”), never blank</div></div>
+    <div class="gtr"><div class="g-s">10 · Marksheet</div><div class="g-m"><b>Primary</b> ২০২৬ + type + core rows + share · <b>Secondary</b> subject, badges, loyalty</div><div class="g-l">A real card; the shared image hides name &amp; photo (minors)</div></div>
+    <div class="gtr"><div class="g-s">11 · See you 2027</div><div class="g-m"><b>Primary</b> warm close + continue · <b>Secondary</b> share-again</div><div class="g-l">A gentler line; everyone sees this screen</div></div>
+    <div class="gtr"><div class="g-s">★ · Capstone</div><div class="g-m"><b>Primary</b> a rare, elevated reveal that tops the marksheet</div><div class="g-l">Best only — it must stay rare to mean anything</div></div>
+    <div class="gtr"><div class="g-s">◇ · Fresh Start</div><div class="g-m"><b>Primary</b> a cover + an encouraging close (2 slides total)</div><div class="g-l">For under-5-active-days; no stats, no fake progress</div></div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-3);margin-top:12px">12 numbered screens exist; each student sees a curated 7–8, in a server-driven order. “Best / Good / Low” are the three sample students used throughout the walk-through below.</p>
+  <div class="foot"><a href="#top">↑ Contents</a><a href="#s0">Start the walk-through →</a></div>
 </div>
 
 <!-- ============ SCREEN 00 ============ -->
