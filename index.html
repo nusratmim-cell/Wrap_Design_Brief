@@ -137,8 +137,19 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .sw{display:flex;align-items:center;gap:7px;background:var(--sheet);border:1px solid var(--line-2);border-radius:8px;padding:6px 11px;font-size:12px;color:var(--ink-2)}
 .chip{width:15px;height:15px;border-radius:4px;border:1px solid rgba(0,0,0,.08);flex:none}
 
+/* home entry banner — one engaging bar, identical for everyone */
+.homebanner{margin-top:16px;position:relative;overflow:hidden;border-radius:16px;background:linear-gradient(120deg,#2B3A7E 0%,#354894 42%,#5468FF 100%);color:#fff;padding:22px clamp(18px,4vw,30px);display:flex;align-items:center;gap:20px;flex-wrap:wrap;box-shadow:0 6px 22px rgba(53,72,148,.28)}
+.homebanner::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(255,201,60,.35),transparent 70%);pointer-events:none}
+.hb-l{flex:1;min-width:210px;position:relative;z-index:1}
+.hb-eye{font-family:var(--f-bn);font-size:12px;font-weight:600;color:#FFE08A;letter-spacing:.02em}
+.hb-title{font-family:var(--f-disp);font-weight:700;font-size:clamp(20px,3.4vw,26px);line-height:1.15;margin-top:5px}
+.hb-sub{font-family:var(--f-bn);font-size:13.5px;color:#DCE1F7;margin-top:6px;max-width:40ch}
+.hb-cta{position:relative;z-index:1;font-family:var(--f-bn);font-weight:700;font-size:15px;color:var(--navy);background:#FFC93C;border-radius:11px;padding:12px 22px;white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.hb-note{margin-top:13px;background:var(--sheet);border:1px solid var(--line-2);border-radius:11px;padding:12px 15px;font-size:12.5px;color:var(--ink-2);line-height:1.5}
+.hb-note b{color:var(--ink)}
 @media (max-width:760px){
   .states3{grid-template-columns:1fr}
+  .homebanner{gap:14px}.hb-cta{width:100%;text-align:center}
   .legends{grid-template-columns:1fr}
   .tiers{grid-template-columns:1fr}
   .rtr{grid-template-columns:minmax(104px,42%) 1fr}
@@ -227,19 +238,21 @@ h1,h2,h3{margin:0;text-wrap:balance}
 <div class="sheet" id="s0">
   <div class="s-top"><span class="s-num">00</span><div class="s-ttl"><h2>Home entry banner</h2><p class="s-purpose">Earn the one tap that starts everything. It replaces the existing Year-Review banner — we’re not redesigning the home.</p></div></div>
   <div class="elrow">
-    <div class="grp"><span class="tagx tx-pri">Primary</span><span class="l2"><b>Shikho + ২০২৬ / খাতা identity</b>, one clear button, a small one-time “new” cue.</span></div>
-    <div class="grp"><span class="tagx tx-sec">Secondary</span><span class="l2">A personalised number — only if it’s big enough to be honest.</span></div>
+    <div class="grp"><span class="tagx tx-pri">Primary</span><span class="l2"><b>Shikho + ২০২৬ / খাতা identity</b>, one bright button, a small one-time “new” cue.</span></div>
+    <div class="grp"><span class="tagx tx-sec">Secondary</span><span class="l2">The student’s name — the one personal touch. Never a stat or a number here.</span></div>
   </div>
-  <div class="states3">
-    <div class="st st-best"><div class="st-h"><span class="st-chip c-best">Best</span><span class="nm">আরিফ</span></div>
-      <div class="phone"><div class="p-eyebrow">🔔 নতুন</div><div class="p-name">আরিফ, ২১০ ঘণ্টার গল্প তৈরি!</div><div class="p-cta">আমার খাতা দেখি</div></div>
-      <div class="st-cap">Name + an honest teaser number, because his is big enough to show.</div></div>
-    <div class="st st-good"><div class="st-h"><span class="st-chip c-good">Good</span><span class="nm">নিশাত</span></div>
-      <div class="phone"><div class="p-eyebrow">🔔 নতুন</div><div class="p-name">নিশাত, তোমার ২০২৬-এর গল্প তৈরি!</div><div class="p-cta">আমার খাতা দেখি</div></div>
-      <div class="st-cap">Name + button, the standard banner. No number needed.</div></div>
-    <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone"><div class="p-eyebrow">🔔 নতুন</div><div class="p-name">তোমার ২০২৬-এর খাতা তৈরি!</div><div class="p-cta">আমার খাতা দেখি</div></div>
-      <div class="st-cap"><b>No number</b> (too small to be honest). <b>Not a paid student → no banner at all.</b> Not ready → tap opens a “শীঘ্রই আসছে” sheet.</div></div>
+  <div style="margin-top:4px;font-size:13px;color:var(--magenta);font-weight:600">★ The one screen that is the same for everyone — it must be inviting enough that every student taps in.</div>
+  <div class="homebanner">
+    <div class="hb-l">
+      <div class="hb-eye">✨ নতুন · Year-End Wrap ২০২৬</div>
+      <div class="hb-title">নিশাত, তোমার ২০২৬-এর খাতা তৈরি!</div>
+      <div class="hb-sub">সারা বছরের শেখা, এক খাতায়। খুলে দেখো তোমার নিজের গল্প।</div>
+    </div>
+    <div class="hb-cta">আমার খাতা দেখি →</div>
+  </div>
+  <div class="hb-note">
+    <b>Same bright banner for every student — Best, Good or Low alike.</b> No stats, no numbers, nothing that could look small or discouraging; the only variable is the name (<span class="bn">নিশাত, …</span>), and if we don’t have it the headline is simply <span class="bn">“তোমার ২০২৬-এর খাতা তৈরি!”</span>. The pull to open must be equal for all.<br><br>
+    <b>Edge cases:</b> not a paid student → no banner at all · Wrap not generated yet → tapping opens a <span class="bn">“শীঘ্রই আসছে”</span> sheet · already opened once → the shimmer calms down, the banner stays.
   </div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s1">Next → Cover</a></div>
 </div>
