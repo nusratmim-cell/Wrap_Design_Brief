@@ -119,6 +119,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
 /* teacher avatar fallback ladder */
 .p-ava.photo{background:linear-gradient(135deg,#F4DCC4,#E3B48C)}
 .p-ava.illus{background:var(--navy-soft)}
+.p-ava.gen-m{background:#E4E9F7}
+.p-ava.gen-f{background:#F7E3EF}
 .p-ava.mono{background:var(--navy);color:#fff;font-family:var(--f-bn);font-weight:700;font-size:18px}
 .ladder{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:14px}
 .lad{display:flex;align-items:center;gap:8px;background:var(--sheet);border:1px solid var(--line-2);border-radius:10px;padding:7px 11px;font-size:12px;color:var(--ink-2)}
@@ -127,6 +129,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .lad .av.mono{background:var(--navy);color:#fff;font-family:var(--f-bn);font-weight:700;font-size:12px}
 .lad .av.photo{background:linear-gradient(135deg,#F4DCC4,#E3B48C)}
 .lad .av.illus{background:var(--navy-soft)}
+.lad .av.gen-m{background:#E4E9F7}
+.lad .av.gen-f{background:#F7E3EF}
 .lad .av.nm{background:var(--sunken);color:var(--ink-3);font-size:13px}
 .lad-ar{color:var(--ink-3);font-size:14px;font-weight:700}
 .p-rows{width:100%;display:flex;flex-direction:column;gap:5px;margin-top:3px}
@@ -359,27 +363,26 @@ h1,h2,h3{margin:0;text-wrap:balance}
   <div class="s-top"><span class="s-num alt">04</span><div class="s-ttl"><h2>Teacher</h2><p class="s-purpose">A human moment — the teacher they spent the most live time with. Most-attended, <i>not</i> “favourite”.</p></div><span class="tag tag-plan">Planned · confirm first</span></div>
   <div class="elrow">
     <div class="grp"><span class="tagx tx-pri">Primary</span><span class="l2"><b>Teacher name</b> + one warm framing line. Avoid “প্রিয় শিক্ষক”.</span></div>
-    <div class="grp"><span class="tagx tx-sec">Secondary</span><span class="l2">The teacher’s avatar — an approved photo if we have one, otherwise an illustration or their initials. It drops down the ladder below.</span></div>
+    <div class="grp"><span class="tagx tx-sec">Secondary</span><span class="l2">The teacher’s avatar — an approved photo if we have one; if not, a <b>generic male/female avatar</b> (by title: স্যার / ম্যাম). It drops down the ladder below.</span></div>
   </div>
   <div class="states3">
     <div class="st st-best"><div class="st-h"><span class="st-chip c-best">Best</span><span class="nm">আরিফ</span></div>
       <div class="phone"><div class="p-eyebrow">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="p-ava photo">🧑🏽‍🏫</div><div class="p-name">রাহেলা ম্যাম</div></div>
       <div class="st-cap">His teacher has a cleared photo, so we use it — the fullest version.</div></div>
     <div class="st st-good"><div class="st-h"><span class="st-chip c-good">Good</span><span class="nm">নিশাত</span></div>
-      <div class="phone"><div class="p-eyebrow">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="p-ava illus">👩🏽‍🏫</div><div class="p-name">করিম স্যার</div></div>
-      <div class="st-cap">No cleared photo for her teacher, so we drop to the Shikho illustrated avatar. Still warm.</div></div>
+      <div class="phone"><div class="p-eyebrow">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="p-ava gen-m">👨🏽‍🏫</div><div class="p-name">করিম স্যার</div></div>
+      <div class="st-cap">No cleared photo for her teacher (he’s “স্যার”), so we use a generic <b>male</b> avatar with his name.</div></div>
     <div class="st st-low"><div class="st-h"><span class="st-chip c-low">Low</span><span class="nm">রাফি</span></div>
-      <div class="phone"><div class="p-eyebrow">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="p-ava mono">রু</div><div class="p-name">রুমানা ম্যাডাম</div></div>
-      <div class="st-cap">Rafi still gets this screen — he had a most-attended teacher too. No photo or illustration on hand, so it’s her initials plus the name.</div></div>
+      <div class="phone"><div class="p-eyebrow">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="p-ava gen-f">👩🏽‍🏫</div><div class="p-name">রুমানা ম্যাডাম</div></div>
+      <div class="st-cap">Rafi had a most-attended teacher too. No photo, and she’s “ম্যাডাম”, so a generic <b>female</b> avatar with her name.</div></div>
   </div>
   <div class="ladder">
     <span style="font-size:12px;color:var(--ink-3);font-weight:700">Avatar ladder:</span>
     <span class="lad"><span class="av photo">🧑🏽‍🏫</span><b>Approved photo</b></span><span class="lad-ar">→</span>
-    <span class="lad"><span class="av illus">👩🏽‍🏫</span><b>Illustrated avatar</b></span><span class="lad-ar">→</span>
-    <span class="lad"><span class="av mono">রু</span><b>Initials</b></span><span class="lad-ar">→</span>
+    <span class="lad"><span class="av gen-f">👩🏽‍🏫</span><span class="av gen-m">👨🏽‍🏫</span><b>Generic female / male avatar</b></span><span class="lad-ar">→</span>
     <span class="lad"><span class="av nm">Aa</span><b>Name only</b></span>
   </div>
-  <div class="note" style="margin-top:14px"><b>Why a ladder, not just a photo:</b> only <b>approved, currently-active</b> teachers get a real photo — a teacher who’s left or isn’t cleared drops a rung, never a face we shouldn’t show. “Most-attended” means the most live minutes; if two teachers tie or the match is shaky, we show one and never guess a wrong face. Lining up that approved-portrait set is the “confirm first” part before this screen ships.</div>
+  <div class="note" style="margin-top:14px"><b>Why a ladder, not just a photo:</b> only <b>approved, currently-active</b> teachers get a real photo. No photo? We fall to a clean <b>generic male/female avatar</b> (picked from the teacher’s title or gender field) — never a blank, never a wrong face. “Most-attended” means the most live minutes; on a tie we show one and don’t guess. Lining up that approved-portrait set is the “confirm first” part before this screen ships.</div>
   <div class="foot"><a href="#top">↑ Contents</a><a href="#s5">Next → Quiz</a></div>
 </div>
 
@@ -512,7 +515,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   <div class="twoart">
     <div class="ta priv"><div class="ta-h"><span class="ta-tag ta-priv">In-app card</span><span class="who">private · only the student</span></div>
       <div class="phone start" style="max-width:220px;margin:0 auto"><div class="p-id"><span class="p-photo">👧🏽</span><span class="nm">নিশাত</span></div><div class="p-stamp" style="font-size:12px;transform:none">নিয়মিত পড়ুয়া</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৪৮টি</span></div></div></div>
-      <div class="ta-cap">Photo and name are fine here — this card lives inside the app and only the student sees it, unless they choose to share.</div></div>
+      <div class="ta-cap">Photo and name are fine here — this card lives inside the app and only the student sees it, unless they choose to share. <b>No student photo on file? Use a generic male/female avatar</b> (by gender), never a blank or a broken image.</div></div>
     <div class="ta pub"><div class="ta-h"><span class="ta-tag ta-pub">Shared image</span><span class="who">public link · anyone can open</span></div>
       <div class="phone start" style="max-width:220px;margin:0 auto"><div class="p-eyebrow">আমার ২০২৬ · শিখো</div><div class="p-stamp" style="font-size:12px;transform:none">নিয়মিত পড়ুয়া</div><div class="p-rows"><div class="p-row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="p-row"><span>ক্লাস</span><span>৪৮টি</span></div></div></div>
       <div class="ta-cap">The shared one drops the photo, name, school and rank. That link is public and most of these students are minors, so the card leads with the learner-type and the effort, not the person. Fixed 1080×1920, and the link can be pulled on request.</div></div>
@@ -605,6 +608,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     <div class="rtr"><div class="c-if">A metric’s record is genuinely absent</div><div class="c-do">That one slide won’t render — we never guess or fake data. Rare, not the low-activity path.</div></div>
     <div class="rtr"><div class="c-if">The name is missing, an emoji, or “null”</div><div class="c-do">Fall back to the generic headline. Never render <b>“null”</b> or a blank.</div></div>
     <div class="rtr"><div class="c-if">The name is very long</div><div class="c-do">Trim near ~18 characters; it must never overflow the layout.</div></div>
+    <div class="rtr"><div class="c-if">No photo for a teacher or student</div><div class="c-do">Use a clean <b>generic male/female avatar</b> (by gender/title) — never a blank, broken image, or wrong face.</div></div>
     <div class="rtr"><div class="c-if">Impossible data (study &gt; 24h/day, attendance &gt; 100%, negatives)</div><div class="c-do">The row is caught by the QA gate and held back until fixed — a wrong card never ships.</div></div>
   </div>
 
