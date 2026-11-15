@@ -24,6 +24,10 @@ a{color:var(--navy);text-decoration:none}
 .topbar .in{max-width:1040px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .topbar .bk{font-family:var(--disp);font-weight:700;color:var(--navy);font-size:1.05rem}
 .topbar .tag{font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ring);background:var(--ring-s);padding:4px 10px;border-radius:999px}
+.topbar .right{display:flex;align-items:center;gap:10px}
+.topbar .proto{font-size:.8rem;font-weight:600;color:#fff;background:var(--navy);padding:6px 13px;border-radius:999px;white-space:nowrap}
+.protobtn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:var(--navy);color:#fff;font-weight:600;font-size:.92rem;padding:9px 16px;border-radius:10px}
+.protobtn:hover{background:var(--navy2)}
 
 .wrap{max-width:1040px;margin:0 auto;padding:26px 22px 60px}
 
@@ -126,7 +130,7 @@ a{color:var(--navy);text-decoration:none}
 </head>
 <body>
 <div class="accentbar"></div>
-<div class="topbar"><div class="in"><span class="bk">Shikho · Year-End Wrap ২০২৬</span><span class="tag">Screen Guide</span></div></div>
+<div class="topbar"><div class="in"><span class="bk">Shikho · Year-End Wrap ২০২৬</span><span class="right"><a class="proto" href="https://shikho-year-end-wrap.vercel.app/?v=b" target="_blank" rel="noopener">▶ Live prototype</a><span class="tag">Screen Guide</span></span></div></div>
 
 <div class="wrap">
 
@@ -136,6 +140,7 @@ a{color:var(--navy);text-decoration:none}
       <div class="kick">Direction B · “Marksheet” খাতা</div>
       <h1>Wrap ২০২৬ — Screen Guide</h1>
       <p class="sub">Every screen, its elements, and how it looks for three kinds of student — Best, Good and Low — side by side. Read top to bottom.</p>
+      <a class="protobtn" href="https://shikho-year-end-wrap.vercel.app/?v=b" target="_blank" rel="noopener">▶ Open the live prototype (v=b)</a>
 
       <h2><span class="b"></span>What it is</h2>
       <ul>
@@ -192,7 +197,7 @@ a{color:var(--navy);text-decoration:none}
     <p class="sdesc">The home-screen banner that starts the Wrap. <b>The same for everyone</b> — no Best/Good/Low here; it just has to be inviting enough to tap.</p>
     <div class="shows"><div><span class="pr">● Primary</span> — identity + one button + one-time “new” cue</div><div><span class="sc">○ Secondary</span> — the name (never a number)</div></div>
     <div style="max-width:300px;margin:16px auto 0"><div class="phone"><div class="scr"><div class="banner"><div class="be">✨ নতুন · Wrap ২০২৬</div><div class="bt">নিশাত, তোমার ২০২৬-এর খাতা তৈরি!</div></div><div class="cta">আমার খাতা দেখি →</div></div></div></div>
-    <div class="note">Not a paid student → no banner at all. Not generated yet → tapping opens a <span class="bn">“শীঘ্রই আসছে”</span> sheet.</div>
+    <div class="note"><b>Two cases to handle here:</b><br>• If the student <b>hasn’t paid</b>, don’t show the banner at all — they aren’t eligible for the Wrap.<br>• If they’ve paid but their Wrap <b>isn’t ready yet</b>, still show the banner — but tapping it opens a small <span class="bn">“শীঘ্রই আসছে”</span> (coming soon) sheet instead of the Wrap.</div>
   </section>
 
   <!-- 01 -->
@@ -370,7 +375,6 @@ a{color:var(--navy);text-decoration:none}
       <li><span class="n">7</span><div><b>Bangla-first, motion-safe</b><p>Renders in Bangla with Bengali numerals even in an English app; works fully with motion off.</p></div></li>
       <li><span class="n">8</span><div><b>Everyone finishes proud</b><p>Best, Good or quiet — lead with effort, never shame a number.</p></div></li>
     </ol>
-    <div class="note">Sample names and numbers (<span class="bn">আরিফ · নিশাত · রাফি</span>…) are illustrative — every real value comes from the student’s own data.</div>
   </section>
 
 </div>
