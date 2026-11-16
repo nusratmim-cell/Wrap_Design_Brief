@@ -71,6 +71,7 @@ a{color:var(--navy);text-decoration:none}
 .stamp{font-family:var(--bn);font-weight:700;font-size:19px;color:var(--open);border:2px dashed var(--open);border-radius:12px;padding:7px 15px;transform:rotate(-3deg)}
 .ribbon{font-family:var(--bn);font-weight:700;font-size:12px;color:#7a5600;background:var(--flag-s);border:1px solid var(--flag-br);border-radius:999px;padding:4px 11px}
 .cta{font-family:var(--bn);font-size:13px;font-weight:700;color:#fff;background:#5468FF;border-radius:9px;padding:7px 16px}
+.cta2{font-family:var(--bn);font-size:12px;font-weight:600;color:#5468FF;background:none;padding:3px 10px;text-decoration:underline;text-underline-offset:2px}
 .ava{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:25px}
 .ava.photo{background:linear-gradient(135deg,#F4DCC4,#E3B48C)} .ava.gm{background:#E4E9F7} .ava.gf{background:#F7E3EF}
 .rows{width:100%;display:flex;flex-direction:column;gap:6px;margin-top:3px}
@@ -137,7 +138,7 @@ a{color:var(--navy);text-decoration:none}
 .mscr::after{content:"";position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:58px;height:4px;border-radius:3px;background:#E8EAF1}
 .mscr .big{font-size:30px} .mscr .nm{font-size:15px} .mscr .ey{font-size:10.5px} .mscr .unit{font-size:12px}
 .mscr .stamp{font-size:13px;padding:5px 11px} .mscr .ava{width:40px;height:40px;font-size:18px}
-.mscr .ribbon{font-size:10px} .mscr .cta{font-size:10px;padding:5px 11px} .mscr .row{font-size:10px}
+.mscr .ribbon{font-size:10px} .mscr .cta{font-size:10px;padding:5px 11px} .mscr .cta2{font-size:9px;padding:2px 7px} .mscr .row{font-size:10px}
 .scap{font-size:.86rem;color:var(--muted);margin-top:10px;line-height:1.5}
 .scap b{color:var(--ink);font-weight:600}
 
@@ -469,7 +470,7 @@ a{color:var(--navy);text-decoration:none}
     <p class="sdesc"><b>Purpose:</b> the signature screen — a stamp naming <i>how</i> they studied. Identity travels; this is the most shareable moment.</p>
     <p class="take"><b>Takeaway:</b> <span class="bn">“নিজের সম্পর্কে নতুন কিছু জানলাম।”</span> Every type must come with a <b>real, specific reason from their data</b> — never “you have an identity”.</p>
     <div class="split">
-      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>One <b>type stamp</b> from the validated set (the real 7 — see <a href="#types">below</a>)</li><li>A <b>reason line = the stat behind that type</b></li><li>Active days / streak as support (streak only if ≥3 days)</li><li>Under 5 active days → not typed → <a href="#sfresh">Fresh Start</a></li></ul></div>
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>One <b>type stamp</b> from the validated set (the real 7 — see <a href="#types">below</a>)</li><li>A <b>reason line = the stat behind that type</b></li><li>Active days / streak as support (streak only if ≥3 days)</li><li><b>Action hierarchy — exactly one primary + one secondary</b> (UI-team rule): primary filled button <span class="bn">আমার মার্কশিট দেখি</span> → <a href="#s10">Screen 10</a>; one secondary text link <span class="bn">শেয়ার করো</span>. Nothing else is tappable — no third competing button.</li><li>Under 5 active days → not typed → <a href="#sfresh">Fresh Start</a></li></ul></div>
       <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>The stamp artwork (all types equally positive), the reveal beat, pre/post-reveal and repeat-view states — all working with motion off</li></ul></div>
     </div>
     <div class="copy">
@@ -477,11 +478,13 @@ a{color:var(--navy);text-decoration:none}
       <div class="crow"><span class="cl">Headline</span><span class="cv">তোমার শেখার ধরন কী?</span><span class="cs prop">Proposed</span></div>
       <div class="crow"><span class="cl">Setup</span><span class="cv">সারা বছর কীভাবে পড়েছ, সেটা দেখেই এই ধরন।</span><span class="cs new">Revised</span></div>
       <div class="crow"><span class="cl">Reveal</span><span class="cv">[শিক্ষার্থীর ধরন] + কারণ-লাইন</span><span class="cs brand">Brand</span></div>
+      <div class="crow"><span class="cl">Primary button</span><span class="cv">আমার মার্কশিট দেখি</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Secondary link</span><span class="cv">শেয়ার করো</span><span class="cs prop">Proposed</span></div>
     </div>
     <div class="states">
-      <div class="state"><span class="lab hi">High · রিদম</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">নিয়মিত পড়ুয়া</div><div class="ey">বছরজুড়ে ১৮০ দিন শিখেছ</div></div></div><p class="scap">The reason line matches the <b>axis</b> — here, active days.</p></div>
-      <div class="state"><span class="lab mid">Moderate · ফোকাস</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">একনিষ্ঠ</div><div class="ey">একটা বিষয়েই গভীরভাবে ছিলে</div></div></div><p class="scap">No type beats another — just a different, true trait.</p></div>
-      <div class="state"><span class="lab lim">Limited · balanced</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">ভারসাম্যপূর্ণ</div><div class="ey">সব দিকেই মোটামুটি সমান সময় দিয়েছ</div></div></div><p class="scap"><b>Honest default</b> — given only when no trait stands out, <i>not</i> as a data-gap filler (see note).</p></div>
+      <div class="state"><span class="lab hi">High · রিদম</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">নিয়মিত পড়ুয়া</div><div class="ey">বছরজুড়ে ১৮০ দিন শিখেছ</div><div class="cta">আমার মার্কশিট দেখি</div><div class="cta2">শেয়ার করো</div></div></div><p class="scap">Reason line matches the <b>axis</b> (active days). <b>One primary</b> down, <b>one secondary</b> under it.</p></div>
+      <div class="state"><span class="lab mid">Moderate · ফোকাস</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">একনিষ্ঠ</div><div class="ey">একটা বিষয়েই গভীরভাবে ছিলে</div><div class="cta">আমার মার্কশিট দেখি</div><div class="cta2">শেয়ার করো</div></div></div><p class="scap">No type beats another — but the <b>action is always the same two</b>.</p></div>
+      <div class="state"><span class="lab lim">Limited · balanced</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">ভারসাম্যপূর্ণ</div><div class="ey">সব দিকেই মোটামুটি সমান সময় দিয়েছ</div><div class="cta">আমার মার্কশিট দেখি</div><div class="cta2">শেয়ার করো</div></div></div><p class="scap"><b>Honest default</b> — same single primary + secondary, no extra buttons to explain it.</p></div>
     </div>
     <div class="decision"><span class="dh">Corrected + needs a Product decision</span>The old draft used <span class="bn">একনিষ্ঠ</span> with a <i>streak</i> reason (mismatched), and listed <span class="bn">নির্ভুল পড়ুয়া</span> / <span class="bn">ক্ষিপ্র সমাধানকারী</span> — <b>neither is in the shipping <span class="bn">wrap_type_rule</span></b>, and both need accuracy/speed data the reviewer rightly questioned. The real set is the <a href="#types">7 below</a>. Two live calls: <b>(a)</b> confirm <span class="bn">রাতজাগা পড়ুয়া</span> ships only if hour-band data is reliable (else drop that axis); <b>(b)</b> confirm <span class="bn">ভারসাম্যপূর্ণ</span> reads as a positive “well-rounded”, since it’s assigned when every trait is near-average (Fresh-Start students are excluded from typing, so it isn’t a low-data dumping ground).</div>
   </section>
