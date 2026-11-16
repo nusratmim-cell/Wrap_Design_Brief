@@ -224,7 +224,7 @@ a{color:var(--navy);text-decoration:none}
           <span class="lt">How to read this</span>
           <span class="chip"><span class="dot fix"></span><b style="color:var(--ink);font-weight:600">PRD-fixed</b> — preserve as-is</span>
           <span class="chip"><span class="dot open"></span><b style="color:var(--ink);font-weight:600">Design-open</b> — your call</span>
-          <span class="chip"><span class="dot flag"></span><b style="color:var(--ink);font-weight:600">Needs a Product decision</b></span>
+          <span class="chip"><span class="dot flag"></span><b style="color:var(--ink);font-weight:600">Recommendation</b> — the call I'd ship, to confirm</span>
         </div>
         <p style="font-size:.86rem;color:var(--faint);margin-top:10px">All Bangla below is <b>proposed</b> — Product/Brand approve final wording. Sample numbers in the mockups are not production content.</p>
       </div>
@@ -324,7 +324,7 @@ a{color:var(--navy);text-decoration:none}
       <div class="state"><span class="lab mid">Moderate</span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তুমি পড়েছ</div><div class="big">১৪২</div><div class="unit">ঘণ্টা</div><div class="ey">দিনে ৬ ঘণ্টা ধরলে, প্রায় ২৪ দিন।</div></div></div><p class="scap">A healthy number, stated plainly.</p></div>
       <div class="state"><span class="lab lim">Limited</span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তুমি পড়েছ</div><div class="big">৩৮</div><div class="unit">ঘণ্টা</div></div></div><p class="scap"><b>Honest:</b> just the number — no “keep going”. If it’s below threshold, the slide drops instead.</p></div>
     </div>
-    <div class="decision"><span class="dh">Needs a Product decision</span>The PRD proposes headline tiers <span class="bn">“অসাধারণ পরিশ্রম”</span> (≥200h) and <span class="bn">“শুরুটা দারুণ”</span> (&lt;50h). <b>Recommendation: drop the per-tier compliment.</b> Both use filler words the team flagged (<span class="bn">অসাধারণ · দারুণ</span>), and a low total shouldn’t be dressed up. Let the hours stand.</div>
+    <div class="decision"><span class="dh">Recommendation</span><b>Drop the per-tier compliment.</b> The PRD proposes headline tiers <span class="bn">“অসাধারণ পরিশ্রম”</span> (≥200h) and <span class="bn">“শুরুটা দারুণ”</span> (&lt;50h), but both use filler words the team flagged (<span class="bn">অসাধারণ · দারুণ</span>), and a low total shouldn’t be dressed up. Let the hours stand.</div>
   </section>
 
   <!-- 03 -->
@@ -347,12 +347,12 @@ a{color:var(--navy);text-decoration:none}
       <div class="state"><span class="lab mid">Moderate · 71%</span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৪৮</div><div class="unit">টি ক্লাস</div><div class="ey">৬৮টি ক্লাসের মধ্যে</div></div></div><p class="scap"><b>No badge</b> below 85% — we don’t invent one. The count + held is the story.</p></div>
       <div class="state"><span class="lab lim">Limited</span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৬</div><div class="unit">টি ক্লাস</div></div></div><p class="scap">Just the honest count. Below the attendance threshold → the slide drops.</p></div>
     </div>
-    <div class="decision"><span class="dh">Corrected from the old draft</span>The old site showed a <span class="bn">“নিয়মিত উপস্থিতি (৬০–৮৪%)”</span> badge — <b>that tier is not in <span class="bn">wrap_tier_config</span></b>. The only attendance badge is <span class="bn">ফার্স্ট বেঞ্চার</span> at ≥85%. If a mid-tier badge is wanted, it’s a config + brand decision.</div>
+    <div class="decision"><span class="dh">Corrected from the old draft</span>The old site showed a <span class="bn">“নিয়মিত উপস্থিতি (৬০–৮৪%)”</span> badge — <b>that tier is not in <span class="bn">wrap_tier_config</span></b>. The only attendance badge is <span class="bn">ফার্স্ট বেঞ্চার</span> at ≥85%. <b>We ship that one tier only</b> — no 60–84% badge.</div>
   </section>
 
   <!-- 04 -->
   <section class="screen" id="s4">
-    <div class="shd"><span class="snum alt">04</span><h2>Teacher</h2><span class="pill"><span class="dot flag" style="width:8px;height:8px;border-radius:2px"></span>Confirm launch</span></div>
+    <div class="shd"><span class="snum alt">04</span><h2>Teacher</h2><span class="pill"><span class="dot flag" style="width:8px;height:8px;border-radius:2px"></span>P0 if data ready</span></div>
     <p class="sdesc"><b>Purpose:</b> a human beat — the teacher they spent the most live time with. Most-attended, <b>not</b> “favourite”.</p>
     <p class="take"><b>Takeaway:</b> a warm, familiar face from their year.</p>
     <div class="split">
@@ -369,7 +369,7 @@ a{color:var(--navy);text-decoration:none}
       <div class="state"><span class="lab mid">No photo</span><div class="mphone"><div class="mscr"><div class="ey">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="ava gm">👨🏽‍🏫</div><div class="nm">করিম স্যার</div></div></div><p class="scap">No photo → a generic <b>male</b> avatar.</p></div>
       <div class="state"><span class="lab lim">No reliable teacher</span><div class="mphone"><div class="mscr skip"><div class="ey" style="opacity:.6">— এই স্লাইডটি দেখানো হয় না —</div></div></div><p class="scap"><b>Edge:</b> no reliable record → the slide sits out. We never guess a face.</p></div>
     </div>
-    <div class="decision"><span class="dh">Needs a Product decision</span>Confirm Screen 04 is a <b>P0 launch</b> dependency (per PRD §I). If the teacher data isn’t ready for launch, hold this screen as planned rather than ship it thin.</div>
+    <div class="decision"><span class="dh">Recommendation</span><b>Screen 04 is P0 — but only if the teacher data is launch-ready.</b> If it isn’t, hold the screen as planned rather than ship it thin.</div>
   </section>
 
   <!-- 05 -->
@@ -485,7 +485,7 @@ a{color:var(--navy);text-decoration:none}
       <div class="state"><span class="lab mid">Moderate · ফোকাস</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">একনিষ্ঠ</div><div class="ey">একটা বিষয়েই গভীরভাবে ছিলে</div><div class="cta">আমার মার্কশিট দেখি</div><div class="cta2">শেয়ার করো</div></div></div><p class="scap">No type beats another — but the <b>action is always the same two</b>.</p></div>
       <div class="state"><span class="lab lim">Limited · balanced</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">ভারসাম্যপূর্ণ</div><div class="ey">সব দিকেই মোটামুটি সমান সময় দিয়েছ</div><div class="cta">আমার মার্কশিট দেখি</div><div class="cta2">শেয়ার করো</div></div></div><p class="scap"><b>Honest default</b> — same single primary + secondary, no extra buttons to explain it.</p></div>
     </div>
-    <div class="decision"><span class="dh">Corrected + needs a Product decision</span>The old draft used <span class="bn">একনিষ্ঠ</span> with a <i>streak</i> reason (mismatched), and listed <span class="bn">নির্ভুল পড়ুয়া</span> / <span class="bn">ক্ষিপ্র সমাধানকারী</span> — <b>neither is in the shipping <span class="bn">wrap_type_rule</span></b>, and both need accuracy/speed data the reviewer rightly questioned. The real set is the <a href="#types">7 below</a>. Two live calls: <b>(a)</b> confirm <span class="bn">রাতজাগা পড়ুয়া</span> ships only if hour-band data is reliable (else drop that axis); <b>(b)</b> confirm <span class="bn">ভারসাম্যপূর্ণ</span> reads as a positive “well-rounded”, since it’s assigned when every trait is near-average (Fresh-Start students are excluded from typing, so it isn’t a low-data dumping ground).</div>
+    <div class="decision"><span class="dh">Correction + the calls I’d make</span>The old draft used <span class="bn">একনিষ্ঠ</span> with a <i>streak</i> reason (mismatched), and listed <span class="bn">নির্ভুল পড়ুয়া</span> / <span class="bn">ক্ষিপ্র সমাধানকারী</span> — <b>neither is in the shipping <span class="bn">wrap_type_rule</span></b>, and both need accuracy/speed data the reviewer rightly questioned. The real set is the <a href="#types">7 below</a>. Two calls, defaulted: <b>(a)</b> <span class="bn">রাতজাগা পড়ুয়া</span> ships <i>only</i> if hour-band data is reliable — <b>default: drop that axis</b> so it’s never shown as fact; <b>(b)</b> <span class="bn">ভারসাম্যপূর্ণ</span> ships as a positive “well-rounded”, assigned when every trait is near-average (Fresh-Start students are excluded from typing, so it isn’t a low-data dumping ground).</div>
   </section>
 
   <!-- 10 -->
@@ -583,7 +583,7 @@ a{color:var(--navy);text-decoration:none}
       <div class="bcard"><div class="bn2">🏅 স্ট্রিক মাস্টার</div><p>টানা ২১+ দিন সক্রিয় (longest streak)</p></div>
       <div class="bcard cap" style="grid-column:1/-1"><div class="bn2">⭐ সেরার সেরা <em>capstone · rare</em></div><p>প্রায় সব ব্যাজের top tier যে ছোঁয় — একটাই, বাকিদের উপরে। alt: <span class="bn">কিংবদন্তি</span>. Rarity line: <span class="bn">«খুব কম শিক্ষার্থী এটা অর্জন করে»</span> (a percentile only if truthful).</p></div>
     </div>
-    <div class="decision"><span class="dh">Corrected + needs a Product decision</span>The old site also showed <span class="bn">নিয়মিত উপস্থিতি (৬০–৮৪%)</span> and <span class="bn">কুইজ চ্যাম্পিয়ন (১৫০)</span> — <b>neither exists in the current config.</b> If a second attendance tier or a 150-quiz tier is wanted, add it to <span class="bn">wrap_tier_config</span> (no app release needed) and get the Bangla name brand-approved. Also lock the <b>capstone bar</b> (top tier of all / nearly all badges) and whether a percentile can be stated truthfully.</div>
+    <div class="decision"><span class="dh">Correction + the call I’d make</span>The old site also showed <span class="bn">নিয়মিত উপস্থিতি (৬০–৮৪%)</span> and <span class="bn">কুইজ চ্যাম্পিয়ন (১৫০)</span> — <b>neither exists in the current config, so we ship neither for v1.</b> (Either can be added later to <span class="bn">wrap_tier_config</span> without an app release, with a brand-approved Bangla name.) The <b>capstone bar</b> is “top tier of all / nearly all badges”, and a percentile line shows only where it’s truthful.</div>
   </section>
 
   <!-- RULES -->
