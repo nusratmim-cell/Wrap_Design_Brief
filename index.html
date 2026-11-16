@@ -147,6 +147,17 @@ a{color:var(--navy);text-decoration:none}
 .decision{margin-top:15px;background:var(--flag-s);border:1px solid var(--flag-br);border-left:3px solid var(--flag);border-radius:10px;padding:12px 15px;color:#4A3600;font-size:.93rem;line-height:1.55}
 .decision b{color:var(--flag)}
 .decision .dh{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--flag);display:block;margin-bottom:3px}
+.protonote{font-size:.9rem;color:var(--muted);margin-top:11px;line-height:1.55;max-width:60ch}
+.protonote b{color:var(--ink);font-weight:700}
+.act{margin-top:15px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.act .ah{background:#EAF1EC;color:#2C7A4B;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:8px 14px;display:block}
+.act .arow{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline;padding:10px 14px;border-top:1px solid var(--line2)}
+.act .al{font-size:.72rem;color:var(--faint);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.act .av{font-size:.95rem;color:var(--ink);line-height:1.45}
+.act .av .bn{font-family:var(--bn);font-size:1.02rem}
+.act .btn{display:inline-block;font-family:var(--bn);font-weight:700;font-size:.95rem;color:#fff;background:#5468FF;border-radius:7px;padding:2px 11px;line-height:1.6}
+.act .lnk{font-family:var(--bn);font-weight:600;font-size:1rem;color:#5468FF;text-decoration:underline;text-underline-offset:2px}
+.act .none{color:var(--faint);font-style:italic}
 
 /* badges / types tables */
 .bgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
@@ -202,6 +213,7 @@ a{color:var(--navy);text-decoration:none}
         <h1>Year-End Wrap ২০২৬ — Design Brief</h1>
         <p class="sub">A short, personal tap-through recap of a student’s 2026 on Shikho — their hours, classes, practice and the kind of learner they were — ending on a card they can share. This brief says what each screen must do and what’s yours to design.</p>
         <a class="protobtn" href="https://shikho-year-end-wrap.vercel.app/?v=b" target="_blank" rel="noopener">▶ Open the live prototype (v=b)</a>
+        <p class="protonote">The <b>v=b prototype is a reference, not a mandate</b> — just one way this flow can look. Treat its layout, motion and art as a starting point you’re free to depart from. What’s binding is each screen’s <b>Must-show</b> items and the <b>Rules true on every screen</b>; the visual direction is yours.</p>
 
         <h2><span class="b"></span>What it is</h2>
         <ul>
@@ -211,6 +223,8 @@ a{color:var(--navy);text-decoration:none}
           <li>Android only · Bangla-first (Bengali numerals) · runs 26–31 December 2026.</li>
         </ul>
         <p class="arc">The flow is an emotional ramp: <b>personal → reflective → rewarding → shareable</b>, peaking at the learner-type reveal (Screen 09). The goal reaction is <span class="bn">“আরে, আমি এত কিছু করেছি!”</span> — recognition, not a stream of compliments.</p>
+
+        <div class="note"><b>Navigation &amp; actions.</b> It’s a tap-through story (like a Stories deck): a progress bar at the top, <b>tap right / left or swipe</b> to move between slides — so the story slides (01–08) carry <b>no on-slide buttons</b>. Real buttons appear only where a choice is offered: the <b>banner (00)</b>, the <b>reveal (09)</b>, the <b>marksheet (10)</b> and the <b>close (11)</b>. On each of those, the <b>UI team’s rule holds — exactly one primary + one secondary</b>, and every such screen below spells out its <b>Primary</b> and <b>Secondary</b> explicitly.</div>
 
         <h2><span class="b"></span>Three activity levels (shown on each screen)</h2>
         <p style="font-size:.9rem;color:var(--muted);margin-bottom:4px">Illustrative sample profiles, used to show how a screen adapts. Neutral by design — no student is “better”.</p>
@@ -280,6 +294,10 @@ a{color:var(--navy);text-decoration:none}
       <div class="crow"><span class="cl">Coming-soon</span><span class="cv">শীঘ্রই আসছে — তোমার খাতা এখন তৈরি হচ্ছে।</span><span class="cs prop">Proposed</span></div>
     </div>
     <div style="max-width:300px;margin:16px auto 0"><div class="phone"><div class="scr"><div class="banner"><div class="be">✨ নতুন · Wrap ২০২৬</div><div class="bt">নিশাত, তোমার এই বছরটা একবার দেখে নাও।</div><div class="be" style="color:#DCE1F7;font-weight:500">এই বছর যা যা করেছ, সব এক খাতায়।</div></div><div class="cta">আমার খাতা দেখি</div></div></div></div>
+    <div class="act"><span class="ah">Action hierarchy</span>
+      <div class="arow"><span class="al">Primary</span><span class="av"><span class="btn">আমার খাতা দেখি</span> → opens the Wrap</span></div>
+      <div class="arow"><span class="al">Secondary</span><span class="av"><span class="none">None</span> — the banner has one job: open it. (Dismiss by scrolling the home feed.)</span></div>
+    </div>
     <div class="note"><b>Changed from the old draft:</b> the headline <span class="bn">“তোমার ২০২৬-এর গল্প তৈরি!”</span> was replaced — it leaned on <span class="bn">গল্প</span> and read as generated. The new line invites a look without over-claiming.</div>
   </section>
 
@@ -316,7 +334,7 @@ a{color:var(--navy);text-decoration:none}
     </div>
     <div class="copy">
       <div class="ch">Proposed copy</div>
-      <div class="crow"><span class="cl">Primary</span><span class="cv">এই বছর তুমি পড়েছ [X] ঘণ্টা</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Hero line</span><span class="cv">এই বছর তুমি পড়েছ [X] ঘণ্টা</span><span class="cs dyn">Dynamic</span></div>
       <div class="crow"><span class="cl">Comparison</span><span class="cv">দিনে ৬ ঘণ্টা ধরলে, প্রায় [Y] দিনের সমান। <small>only when meaningful</small></span><span class="cs prop">Proposed</span></div>
     </div>
     <div class="states">
@@ -339,7 +357,7 @@ a{color:var(--navy);text-decoration:none}
     <div class="copy">
       <div class="ch">Proposed copy</div>
       <div class="crow"><span class="cl">Headline</span><span class="cv">লাইভ ক্লাসে তোমার উপস্থিতি</span><span class="cs prop">Proposed</span></div>
-      <div class="crow"><span class="cl">Primary</span><span class="cv">[X]টি ক্লাসে অংশ নিয়েছ তুমি</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Hero line</span><span class="cv">[X]টি ক্লাসে অংশ নিয়েছ তুমি</span><span class="cs dyn">Dynamic</span></div>
       <div class="crow"><span class="cl">Badge</span><span class="cv">ফার্স্ট বেঞ্চার <small>only when earned (≥85%)</small></span><span class="cs brand">Brand</span></div>
     </div>
     <div class="states">
@@ -384,7 +402,7 @@ a{color:var(--navy);text-decoration:none}
     <div class="copy">
       <div class="ch">Proposed copy</div>
       <div class="crow"><span class="cl">Headline</span><span class="cv">কুইজে কেমন কাটল তোমার বছর?</span><span class="cs prop">Proposed</span></div>
-      <div class="crow"><span class="cl">Primary</span><span class="cv">এই বছর [X]টি কুইজ শেষ করেছ</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Hero line</span><span class="cv">এই বছর [X]টি কুইজ শেষ করেছ</span><span class="cs dyn">Dynamic</span></div>
       <div class="crow"><span class="cl">Near-milestone</span><span class="cv">আর [n]টা হলেই [মাইলফলক] <small>only within ~5 of the tier</small></span><span class="cs prop">Proposed</span></div>
     </div>
     <div class="states">
@@ -406,7 +424,7 @@ a{color:var(--navy);text-decoration:none}
     </div>
     <div class="copy">
       <div class="ch">Proposed copy</div>
-      <div class="crow"><span class="cl">Primary</span><span class="cv">ভিডিও দেখে শিখেছ [X] মিনিট</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Hero line</span><span class="cv">ভিডিও দেখে শিখেছ [X] মিনিট</span><span class="cs dyn">Dynamic</span></div>
       <div class="crow"><span class="cl">Comparison</span><span class="cv">প্রায় [Y] ঘণ্টা ভিডিওতে শেখা। <small>hours, when meaningful</small></span><span class="cs new">Revised</span></div>
     </div>
     <div class="states">
@@ -469,7 +487,7 @@ a{color:var(--navy);text-decoration:none}
     <p class="sdesc"><b>Purpose:</b> the signature screen — a stamp naming <i>how</i> they studied. Identity travels; this is the most shareable moment.</p>
     <p class="take"><b>Takeaway:</b> <span class="bn">“নিজের সম্পর্কে নতুন কিছু জানলাম।”</span> Every type must come with a <b>real, specific reason from their data</b> — never “you have an identity”.</p>
     <div class="split">
-      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>One <b>type stamp</b> from the validated set (the real 7 — see <a href="#types">below</a>)</li><li>A <b>reason line = the stat behind that type</b></li><li>Active days / streak as support (streak only if ≥3 days)</li><li><b>Action hierarchy — exactly one primary + one secondary</b> (UI-team rule): primary filled button <span class="bn">আমার মার্কশিট দেখি</span> → <a href="#s10">Screen 10</a>; one secondary text link <span class="bn">শেয়ার করো</span>. Nothing else is tappable — no third competing button.</li><li>Under 5 active days → not typed → <a href="#sfresh">Fresh Start</a></li></ul></div>
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>One <b>type stamp</b> from the validated set (the real 7 — see <a href="#types">below</a>)</li><li>A <b>reason line = the stat behind that type</b></li><li>Active days / streak as support (streak only if ≥3 days)</li><li><b>One primary + one secondary action</b> — spelled out below</li><li>Under 5 active days → not typed → <a href="#sfresh">Fresh Start</a></li></ul></div>
       <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>The stamp artwork (all types equally positive), the reveal beat, pre/post-reveal and repeat-view states — all working with motion off</li></ul></div>
     </div>
     <div class="copy">
@@ -477,8 +495,10 @@ a{color:var(--navy);text-decoration:none}
       <div class="crow"><span class="cl">Headline</span><span class="cv">তোমার শেখার ধরন কী?</span><span class="cs prop">Proposed</span></div>
       <div class="crow"><span class="cl">Setup</span><span class="cv">সারা বছর কীভাবে পড়েছ, সেটা দেখেই এই ধরন।</span><span class="cs new">Revised</span></div>
       <div class="crow"><span class="cl">Reveal</span><span class="cv">[শিক্ষার্থীর ধরন] + কারণ-লাইন</span><span class="cs brand">Brand</span></div>
-      <div class="crow"><span class="cl">Primary button</span><span class="cv">আমার মার্কশিট দেখি</span><span class="cs prop">Proposed</span></div>
-      <div class="crow"><span class="cl">Secondary link</span><span class="cv">শেয়ার করো</span><span class="cs prop">Proposed</span></div>
+    </div>
+    <div class="act"><span class="ah">Action hierarchy</span>
+      <div class="arow"><span class="al">Primary</span><span class="av"><span class="btn">আমার মার্কশিট দেখি</span> → <a href="#s10">Screen 10</a> (the marksheet)</span></div>
+      <div class="arow"><span class="al">Secondary</span><span class="av"><span class="lnk">শেয়ার করো</span> — shares the type stamp. No third button.</span></div>
     </div>
     <div class="states">
       <div class="state"><span class="lab hi">High · রিদম</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">নিয়মিত পড়ুয়া</div><div class="ey">বছরজুড়ে ১৮০ দিন শিখেছ</div><div class="cta">আমার মার্কশিট দেখি</div><div class="cta2">শেয়ার করো</div></div></div><p class="scap">Reason line matches the <b>axis</b> (active days). <b>One primary</b> down, <b>one secondary</b> under it.</p></div>
@@ -495,13 +515,17 @@ a{color:var(--navy);text-decoration:none}
     <p class="take"><b>Takeaway:</b> <span class="bn">“এটা আমি শেয়ার করতে চাই।”</span></p>
     <div class="split">
       <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li><b>২০২৬ + learner-type + core highlight rows</b> + share</li><li>Earned badges / best subject only if genuine; empty rows omitted (never “--”)</li><li><b>Export is privacy-safe</b> — no name, photo, school or rank by default</li></ul></div>
-      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>Notebook page vs keepsake certificate — <b>your creative call</b>, within Direction B</li><li>How rows assemble into the card; the in-app vs export layouts</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>Notebook page vs keepsake certificate — <b>your creative call</b> (not locked to the v=b prototype)</li><li>How rows assemble into the card; the in-app vs export layouts</li></ul></div>
     </div>
     <div class="copy">
       <div class="ch">Proposed copy</div>
       <div class="crow"><span class="cl">Headline</span><span class="cv">তোমার ২০২৬, এক খাতায়</span><span class="cs prop">Proposed</span></div>
       <div class="crow"><span class="cl">CTA</span><span class="cv">শেয়ার করো</span><span class="cs prop">Proposed</span></div>
       <div class="crow"><span class="cl">Privacy note</span><span class="cv">কার্ডে তোমার নাম, স্কুল বা র‍্যাংক থাকে না।</span><span class="cs prop">Proposed</span></div>
+    </div>
+    <div class="act"><span class="ah">Action hierarchy</span>
+      <div class="arow"><span class="al">Primary</span><span class="av"><span class="btn">শেয়ার করো</span> → opens the OS share sheet with the export card (save-image lives inside that sheet)</span></div>
+      <div class="arow"><span class="al">Secondary</span><span class="av"><span class="lnk">এগিয়ে যাও</span> → <a href="#s11">Screen 11</a> (close). App-level, not part of the card.</span></div>
     </div>
     <div class="states">
       <div class="state"><span class="lab hi">High · in-app</span><div class="mphone"><div class="mscr top"><div class="ey">তোমার ২০২৬, এক খাতায়</div><div class="stamp" style="font-size:11px;transform:none">নিয়মিত পড়ুয়া</div><div class="rows"><div class="row"><span>পড়াশোনা</span><span>২১০ ঘণ্টা</span></div><div class="row"><span>লাইভ ক্লাস</span><span>৬০টি</span></div><div class="row"><span>ব্যাজ</span><span>🏅 ৩টি</span></div></div><div class="cta">শেয়ার করো</div></div></div><p class="scap">Full card with real badges + name/photo (in-app only).</p></div>
@@ -526,8 +550,12 @@ a{color:var(--navy);text-decoration:none}
       <div class="crow"><span class="cl">Primary CTA</span><span class="cv">শেখা চালিয়ে যাও</span><span class="cs prop">Proposed</span></div>
       <div class="crow"><span class="cl">Fresh Start line</span><span class="cv">এবারের শুরুটা ছোট — ২০২৭-এ পুরো বছরটা তোমার সামনে।</span><span class="cs new">Revised</span></div>
     </div>
+    <div class="act"><span class="ah">Action hierarchy</span>
+      <div class="arow"><span class="al">Primary</span><span class="av"><span class="btn">শেখা চালিয়ে যাও</span> → returns to the app home</span></div>
+      <div class="arow"><span class="al">Secondary</span><span class="av"><span class="lnk">আবার শেয়ার করো</span> → re-opens the share sheet. <b>Fresh Start close: primary only, no secondary.</b></span></div>
+    </div>
     <div class="states">
-      <div class="state"><span class="lab hi">Everyone</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:16px">২০২৬ এখানেই শেষ।<br>২০২৭-এ আবার দেখা হবে।</div><div class="cta">শেখা চালিয়ে যাও</div></div></div><p class="scap">Warm, plain, forward — continue + share-again.</p></div>
+      <div class="state"><span class="lab hi">Everyone</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:16px">২০২৬ এখানেই শেষ।<br>২০২৭-এ আবার দেখা হবে।</div><div class="cta">শেখা চালিয়ে যাও</div><div class="cta2">আবার শেয়ার করো</div></div></div><p class="scap">Warm, plain, forward — one primary + one secondary.</p></div>
       <div class="state"><span class="lab lim">Fresh Start close</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:14px">এবারের শুরুটা ছোট —<br>২০২৭-এ পুরো বছরটা<br>তোমার সামনে।</div><div class="cta">শেখা চালিয়ে যাও</div></div></div><p class="scap">Same structure, a gentler line.</p></div>
       <div class="state" style="display:flex;flex-direction:column;justify-content:center"><p class="scap" style="margin:0"><b>One screen, same for all.</b><br>Only the line softens for quieter students; the layout doesn’t change. Fully works with motion off.</p></div>
     </div>
@@ -546,6 +574,10 @@ a{color:var(--navy);text-decoration:none}
       <div class="ch">Proposed copy</div>
       <div class="crow"><span class="cl">Cover</span><span class="cv">তোমার শেখা সবে শুরু হলো।</span><span class="cs new">Revised</span></div>
       <div class="crow"><span class="cl">Close</span><span class="cv">২০২৭-এ পুরো বছরটা তোমার সামনে।</span><span class="cs new">Revised</span></div>
+    </div>
+    <div class="act"><span class="ah">Action hierarchy</span>
+      <div class="arow"><span class="al">Primary</span><span class="av"><span class="btn">শেখা শুরু করো</span> → returns to the app home (close slide only)</span></div>
+      <div class="arow"><span class="al">Secondary</span><span class="av"><span class="none">None</span> — nothing to share here; keep it calm, one action only.</span></div>
     </div>
     <div class="states">
       <div class="state"><span class="lab lim">Slide 1 · cover</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:16px">তোমার শেখা<br>সবে শুরু হলো।</div></div></div><p class="scap">A warm cover — no numbers.</p></div>
