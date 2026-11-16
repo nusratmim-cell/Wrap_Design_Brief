@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Wrap 2026 Screen Guide</title>
+<title>Wrap 2026 — Design Brief</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
@@ -8,8 +8,8 @@
 :root{color-scheme:light;
 --ground:#F6F5F1;--paper:#fff;--ink:#1C2030;--muted:#474E60;--faint:#6B7183;
 --line:#DCDED6;--line2:#ECEDE8;--navy:#354894;--navy2:#28357A;--navy-s:#ECEEF7;
---good:#2C7A4B;--good-s:#E6F2EA;--amber:#8A5D04;--amber-s:#FBF1D8;--amber-br:#E4C06A;
---ring:#C2257F;--ring-s:#FBEAF3;
+--open:#C2257F;--open-s:#FBEAF3;--flag:#8A5D04;--flag-s:#FBF1D8;--flag-br:#E4C06A;
+--hi:#354894;--mid:#5B73B0;--lim:#7C8390;
 --disp:"Baloo Da 2","Hind Siliguri",system-ui,sans-serif;
 --bn:"Hind Siliguri","Baloo Da 2",system-ui,sans-serif;
 --ui:"Inter",system-ui,-apple-system,sans-serif;}
@@ -19,34 +19,44 @@ body{background:var(--ground);color:var(--ink);font-family:var(--ui);font-size:1
 .bn{font-family:var(--bn)}
 a{color:var(--navy);text-decoration:none}
 
-.accentbar{height:5px;background:linear-gradient(90deg,var(--navy),#5468FF 55%,var(--ring))}
+.accentbar{height:5px;background:linear-gradient(90deg,var(--navy),#5468FF 55%,var(--open))}
 .topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
-.topbar .in{max-width:1040px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar .in{max-width:1060px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .topbar .bk{font-family:var(--disp);font-weight:700;color:var(--navy);font-size:1.05rem}
-.topbar .tag{font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ring);background:var(--ring-s);padding:4px 10px;border-radius:999px}
+.topbar .tag{font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--open);background:var(--open-s);padding:4px 10px;border-radius:999px}
 .topbar .right{display:flex;align-items:center;gap:10px}
 .topbar .proto{font-size:.8rem;font-weight:600;color:#fff;background:var(--navy);padding:6px 13px;border-radius:999px;white-space:nowrap}
 .protobtn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:var(--navy);color:#fff;font-weight:600;font-size:.92rem;padding:9px 16px;border-radius:10px}
 .protobtn:hover{background:var(--navy2)}
 
-.wrap{max-width:1040px;margin:0 auto;padding:26px 22px 60px}
+.wrap{max-width:1060px;margin:0 auto;padding:26px 22px 60px}
 
 /* intro */
-.intro{display:grid;grid-template-columns:1fr 290px;gap:34px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 2px 10px rgba(24,30,60,.05)}
-.kick{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ring)}
+.intro{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 2px 10px rgba(24,30,60,.05)}
+.intro .cols{display:grid;grid-template-columns:1fr 290px;gap:34px;align-items:start}
+.kick{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--open)}
 .intro h1{font-family:var(--disp);font-size:2rem;color:var(--navy);line-height:1.1;margin-top:8px}
 .intro .sub{color:var(--muted);font-size:1.03rem;margin-top:8px}
-.intro h2{font-family:var(--disp);font-size:1.1rem;margin:22px 0 8px;color:var(--navy2);display:flex;align-items:center;gap:9px}
+.intro h2{font-family:var(--disp);font-size:1.05rem;margin:22px 0 8px;color:var(--navy2);display:flex;align-items:center;gap:9px}
 .intro h2 .b{width:8px;height:20px;border-radius:4px;background:var(--navy)}
 .intro ul{list-style:none;display:flex;flex-direction:column;gap:7px}
 .intro li{position:relative;padding-left:24px;color:var(--ink)}
 .intro li::before{content:"";position:absolute;left:3px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--navy)}
+.arc{margin-top:14px;font-size:.92rem;color:var(--muted)}
+.arc b{color:var(--navy2)}
 .who{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .wc{flex:1;min-width:120px;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
 .wc .t{font-weight:700;font-size:.9rem;display:flex;align-items:center;gap:7px}
 .wc p{font-size:.82rem;color:var(--muted);margin-top:4px}
 .sw{width:9px;height:9px;border-radius:50%}
-.sw.best{background:var(--navy)} .sw.good{background:#2C7A4B} .sw.low{background:#5B6475}
+.sw.hi{background:var(--hi)} .sw.mid{background:var(--mid)} .sw.lim{background:var(--lim)}
+
+/* legend */
+.legend{margin-top:22px;border-top:1px solid var(--line2);padding-top:16px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.legend .lt{font-size:.78rem;font-weight:700;color:var(--faint);text-transform:uppercase;letter-spacing:.08em}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;color:var(--muted)}
+.dot{width:11px;height:11px;border-radius:3px;flex:0 0 auto}
+.dot.fix{background:var(--navy)} .dot.open{background:var(--open)} .dot.flag{background:var(--flag-br)}
 
 /* phones */
 .phone{width:258px;margin:0 auto;background:linear-gradient(180deg,#2A3350,#1B2238);border-radius:30px;padding:7px;box-shadow:0 18px 44px rgba(24,30,60,.22)}
@@ -58,16 +68,16 @@ a{color:var(--navy);text-decoration:none}
 .big{font-family:var(--disp);font-weight:700;color:var(--navy);line-height:1;font-size:52px}
 .unit{font-family:var(--bn);font-size:16px;color:var(--muted);font-weight:600}
 .nm{font-family:var(--bn);font-weight:700;font-size:22px;color:var(--ink);line-height:1.2}
-.stamp{font-family:var(--bn);font-weight:700;font-size:19px;color:var(--ring);border:2px dashed var(--ring);border-radius:12px;padding:7px 15px;transform:rotate(-3deg)}
-.ribbon{font-family:var(--bn);font-weight:700;font-size:12px;color:#7a5600;background:var(--amber-s);border:1px solid var(--amber-br);border-radius:999px;padding:4px 11px}
+.stamp{font-family:var(--bn);font-weight:700;font-size:19px;color:var(--open);border:2px dashed var(--open);border-radius:12px;padding:7px 15px;transform:rotate(-3deg)}
+.ribbon{font-family:var(--bn);font-weight:700;font-size:12px;color:#7a5600;background:var(--flag-s);border:1px solid var(--flag-br);border-radius:999px;padding:4px 11px}
 .cta{font-family:var(--bn);font-size:13px;font-weight:700;color:#fff;background:#5468FF;border-radius:9px;padding:7px 16px}
 .ava{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:25px}
-.ava.photo{background:linear-gradient(135deg,#F4DCC4,#E3B48C)} .ava.gm{background:#E4E9F7} .ava.gf{background:#F7E3EF} .ava.navy{background:var(--navy-s)}
+.ava.photo{background:linear-gradient(135deg,#F4DCC4,#E3B48C)} .ava.gm{background:#E4E9F7} .ava.gf{background:#F7E3EF}
 .rows{width:100%;display:flex;flex-direction:column;gap:6px;margin-top:3px}
 .row{display:flex;justify-content:space-between;font-family:var(--bn);font-size:12px;color:var(--muted);border-bottom:1px dashed var(--line);padding-bottom:4px}
 .banner{width:100%;background:linear-gradient(120deg,#2B3A7E,#354894 45%,#5468FF);border-radius:16px;padding:20px 16px;color:#fff;display:flex;flex-direction:column;gap:8px}
 .banner .be{font-family:var(--bn);font-size:12px;color:#FFE08A;font-weight:600}
-.banner .bt{font-family:var(--disp);font-weight:700;font-size:17px;line-height:1.2}
+.banner .bt{font-family:var(--disp);font-weight:700;font-size:17px;line-height:1.25}
 
 /* TOC */
 .toc{margin-top:40px}
@@ -81,331 +91,530 @@ a{color:var(--navy);text-decoration:none}
 .tc span{color:var(--muted);font-size:.84rem}
 
 /* screen sections */
-.screen{margin-top:44px;scroll-margin-top:72px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px clamp(16px,3vw,26px);box-shadow:0 1px 6px rgba(24,30,60,.04)}
-.shd{display:flex;align-items:center;gap:14px}
+.screen{margin-top:40px;scroll-margin-top:72px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px clamp(16px,3vw,26px);box-shadow:0 1px 6px rgba(24,30,60,.04)}
+.shd{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .shd .snum{flex:0 0 auto;width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;font-family:var(--disp);font-weight:700;font-size:1.15rem;display:grid;place-items:center}
-.shd .snum.alt{background:var(--ring)} .shd .snum.gold{background:var(--amber-br);color:#5a3d00} .shd .snum.green{background:var(--good)}
-.shd h2{font-family:var(--disp);font-size:1.45rem;color:var(--ink)}
-.shd .pill{margin-left:auto;font-size:.66rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--amber-s);color:var(--amber)}
-.sdesc{color:var(--muted);font-size:1rem;margin:7px 0 0}
+.shd .snum.alt{background:var(--open)} .shd .snum.gold{background:var(--flag-br);color:#5a3d00} .shd .snum.green{background:#2C7A4B}
+.shd h2{font-family:var(--disp);font-size:1.4rem;color:var(--ink)}
+.shd .pill{margin-left:auto;font-size:.64rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--flag-s);color:var(--flag);display:inline-flex;align-items:center;gap:5px}
+.shd .pill.peak{background:var(--open-s);color:var(--open)}
+.sdesc{color:var(--ink);font-size:1rem;margin:9px 0 0}
+.take{color:var(--muted);font-size:.93rem;margin:5px 0 0}
+.take b{color:var(--navy2);font-weight:600}
 
-/* elements line */
-.shows{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.95rem}
-.shows div{color:var(--muted)}
-.shows .pr{color:var(--navy);font-weight:700} .shows .sc{color:var(--ring);font-weight:700}
-.shows b{color:var(--ink);font-weight:600}
+/* fixed vs open split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}
+.sp{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff}
+.sp.fix{border-left:3px solid var(--navy)} .sp.open{border-left:3px solid var(--open)}
+.sp .h{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.sp.fix .h{color:var(--navy)} .sp.open .h{color:var(--open)}
+.sp ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sp li{font-size:.9rem;color:var(--ink);position:relative;padding-left:15px;line-height:1.45}
+.sp li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%}
+.sp.fix li::before{background:var(--navy)} .sp.open li::before{background:var(--open)}
+.sp li em{font-style:normal;color:var(--muted);font-size:.85rem}
+
+/* copy block */
+.copy{margin-top:15px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.copy .ch{background:var(--navy-s);color:var(--navy2);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:8px 14px}
+.crow{display:grid;grid-template-columns:120px 1fr auto;gap:12px;align-items:baseline;padding:10px 14px;border-top:1px solid var(--line2)}
+.crow .cl{font-size:.8rem;color:var(--faint);font-weight:600}
+.crow .cv{font-family:var(--bn);font-size:1.02rem;color:var(--ink)}
+.crow .cv small{font-family:var(--ui);color:var(--muted);font-size:.8rem}
+.cs{font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:3px 8px;border-radius:999px;white-space:nowrap;align-self:center}
+.cs.prop{background:var(--navy-s);color:var(--navy2)} .cs.dyn{background:#EAF1EC;color:#2C7A4B} .cs.brand{background:var(--flag-s);color:var(--flag)} .cs.new{background:var(--open-s);color:var(--open)}
 
 /* 3-state comparison */
 .states{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
 .state{border:1px solid var(--line);border-radius:16px;padding:13px;background:#fff}
 .lab{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 11px;border-radius:999px;color:#fff}
-.lab.best{background:var(--navy)} .lab.good{background:#2C7A4B} .lab.low{background:#5B6475}
-.lab .who2{font-family:var(--bn);font-weight:600;opacity:.85;text-transform:none;letter-spacing:0;font-size:.8rem}
+.lab.hi{background:var(--hi)} .lab.mid{background:var(--mid)} .lab.lim{background:var(--lim)}
 .mphone{margin-top:11px;background:linear-gradient(180deg,#2A3350,#1B2238);border-radius:20px;padding:5px;box-shadow:0 10px 24px rgba(24,30,60,.16)}
 .mscr{position:relative;background:linear-gradient(180deg,#fff,#FAFAF7);border-radius:16px;min-height:158px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:5px;padding:24px 10px 18px}
 .mscr.top{justify-content:flex-start;padding-top:24px}
+.mscr.skip{justify-content:center;background:var(--ground)}
 .mscr::before{content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);width:32px;height:4px;border-radius:3px;background:#E4E6EE}
 .mscr::after{content:"";position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:58px;height:4px;border-radius:3px;background:#E8EAF1}
 .mscr .big{font-size:30px} .mscr .nm{font-size:15px} .mscr .ey{font-size:10.5px} .mscr .unit{font-size:12px}
 .mscr .stamp{font-size:13px;padding:5px 11px} .mscr .ava{width:40px;height:40px;font-size:18px}
 .mscr .ribbon{font-size:10px} .mscr .cta{font-size:10px;padding:5px 11px} .mscr .row{font-size:10px}
 .scap{font-size:.86rem;color:var(--muted);margin-top:10px;line-height:1.5}
-.state.low .scap{color:var(--muted)}
+.scap b{color:var(--ink);font-weight:600}
 
-.note{margin-top:16px;background:#F5F7FC;border:1px solid var(--line);border-left:3px solid var(--navy);border-radius:10px;padding:12px 15px;color:var(--ink);font-size:.95rem;line-height:1.55}
+.note{margin-top:15px;background:#F5F7FC;border:1px solid var(--line);border-left:3px solid var(--navy);border-radius:10px;padding:12px 15px;color:var(--ink);font-size:.93rem;line-height:1.55}
 .note b{font-weight:700;color:var(--navy)}
+.decision{margin-top:15px;background:var(--flag-s);border:1px solid var(--flag-br);border-left:3px solid var(--flag);border-radius:10px;padding:12px 15px;color:#4A3600;font-size:.93rem;line-height:1.55}
+.decision b{color:var(--flag)}
+.decision .dh{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--flag);display:block;margin-bottom:3px}
 
-.foot{max-width:1040px;margin:34px auto 0;padding:18px 22px;border-top:1px solid var(--line);color:var(--faint);font-size:.82rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
-/* badges grid */
-.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+/* badges / types tables */
+.bgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
 .bcard{border:1px solid var(--line);border-radius:14px;padding:13px 15px;background:var(--ground)}
-.bcard.cap{background:linear-gradient(180deg,#FFF9EA,#FBF1D8);border-color:var(--amber-br)}
+.bcard.cap{background:linear-gradient(180deg,#FFF9EA,#FBF1D8);border-color:var(--flag-br)}
 .bcard .bn2{font-family:var(--bn);font-weight:700;color:var(--ink);font-size:1rem}
-.bcard .bn2 em{font-family:var(--ui);font-style:normal;font-size:.68rem;color:var(--amber);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.bcard .bn2 em{font-family:var(--ui);font-style:normal;font-size:.66rem;color:var(--flag);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 .bcard p{font-family:var(--bn);font-size:.9rem;color:var(--muted);margin-top:3px}
-/* rules list */
+
+.ttable{margin-top:16px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.trow{display:grid;grid-template-columns:150px 1fr 150px;gap:12px;padding:11px 14px;border-top:1px solid var(--line2);align-items:baseline}
+.trow:first-child{border-top:none;background:var(--navy-s);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--navy2)}
+.trow .tn{font-family:var(--bn);font-weight:700;color:var(--ink)}
+.trow .td{font-size:.9rem;color:var(--muted)} .trow .td .bn{color:var(--ink)}
+.trow .tr{font-size:.82rem;color:var(--faint)}
+.trow.verify{background:var(--flag-s)} .trow.verify .tr{color:var(--flag);font-weight:600}
+
+/* decisions list */
+.dlist{list-style:none;counter-reset:d;margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.dlist li{display:flex;gap:13px;background:var(--ground);border:1px solid var(--line);border-radius:14px;padding:13px 15px}
+.dlist li::before{counter-increment:d;content:counter(d);flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--flag-s);color:var(--flag);font-family:var(--disp);font-weight:700;font-size:.85rem;display:grid;place-items:center}
+.dlist b{display:block;color:var(--ink);margin-bottom:1px}
+.dlist p{font-size:.9rem;color:var(--muted);line-height:1.5}
+.dlist .src{font-size:.76rem;color:var(--faint)}
+
 .rules{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 .rules li{display:flex;gap:12px;background:var(--ground);border:1px solid var(--line);border-radius:14px;padding:13px 15px}
 .rules .n{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--navy-s);color:var(--navy2);font-family:var(--disp);font-weight:700;font-size:.85rem;display:grid;place-items:center}
 .rules b{display:block;color:var(--ink);margin-bottom:1px}
 .rules p{font-size:.9rem;color:var(--muted);line-height:1.5}
 
+.foot{max-width:1060px;margin:34px auto 0;padding:18px 22px;border-top:1px solid var(--line);color:var(--faint);font-size:.82rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
 @media (max-width:860px){
-  .intro{grid-template-columns:1fr;gap:22px}
-  .tgrid{grid-template-columns:1fr}
-  .states{grid-template-columns:1fr}
-  .rules{grid-template-columns:1fr}
-  .bgrid{grid-template-columns:1fr}
+  .intro .cols{grid-template-columns:1fr;gap:22px}
+  .tgrid,.states,.rules,.bgrid,.split{grid-template-columns:1fr}
+  .crow{grid-template-columns:1fr;gap:4px}
+  .trow{grid-template-columns:1fr;gap:3px} .trow .tr{font-size:.8rem}
 }
 </style>
 </head>
 <body>
 <div class="accentbar"></div>
-<div class="topbar"><div class="in"><span class="bk">Shikho · Year-End Wrap ২০২৬</span><span class="right"><a class="proto" href="https://shikho-year-end-wrap.vercel.app/?v=b" target="_blank" rel="noopener">▶ Live prototype</a><span class="tag">Screen Guide</span></span></div></div>
+<div class="topbar"><div class="in"><span class="bk">Shikho · Year-End Wrap ২০২৬</span><span class="right"><a class="proto" href="https://shikho-year-end-wrap.vercel.app/?v=b" target="_blank" rel="noopener">▶ Live prototype</a><span class="tag">Design Brief</span></span></div></div>
 
 <div class="wrap">
 
   <!-- INTRO -->
-  <div class="intro">
-    <div>
-      <div class="kick">Direction B · “Marksheet” খাতা</div>
-      <h1>Wrap ২০২৬ — Screen Guide</h1>
-      <p class="sub">Every screen, its elements, and how it looks for three kinds of student — Best, Good and Low — side by side. Read top to bottom.</p>
-      <a class="protobtn" href="https://shikho-year-end-wrap.vercel.app/?v=b" target="_blank" rel="noopener">▶ Open the live prototype (v=b)</a>
+  <div class="intro" id="top">
+    <div class="cols">
+      <div>
+        <div class="kick">For the Shikho UI/UX team · v2</div>
+        <h1>Year-End Wrap ২০২৬ — Design Brief</h1>
+        <p class="sub">A short, personal tap-through recap of a student’s 2026 on Shikho — their hours, classes, practice and the kind of learner they were — ending on a card they can share. This brief says what each screen must do and what’s yours to design.</p>
+        <a class="protobtn" href="https://shikho-year-end-wrap.vercel.app/?v=b" target="_blank" rel="noopener">▶ Open the live prototype (v=b)</a>
 
-      <h2><span class="b"></span>What it is</h2>
-      <ul>
-        <li>A tap-through <span class="bn">খাতা</span> that plays a student their own 2026 — study, classes, practice, and their learner-type.</li>
-        <li><b>12 screens</b> exist; each student sees a curated <b>7–8</b>, in a server-driven order.</li>
-        <li>It ends on a <b>shareable marksheet</b>.</li>
-      </ul>
+        <h2><span class="b"></span>What it is</h2>
+        <ul>
+          <li>A full-screen <span class="bn">খাতা</span> (notebook) that plays a student their own year, one idea per screen.</li>
+          <li><b>12 screens exist; each student sees a curated 7–8</b>, in a server-driven order — the thin ones are left out.</li>
+          <li>It opens from the existing home banner and ends on a <b>shareable marksheet</b>.</li>
+          <li>Android only · Bangla-first (Bengali numerals) · runs 26–31 December 2026.</li>
+        </ul>
+        <p class="arc">The flow is an emotional ramp: <b>personal → reflective → rewarding → shareable</b>, peaking at the learner-type reveal (Screen 09). The goal reaction is <span class="bn">“আরে, আমি এত কিছু করেছি!”</span> — recognition, not a stream of compliments.</p>
 
-      <h2><span class="b"></span>The three students (on every screen)</h2>
-      <div class="who">
-        <div class="wc"><div class="t"><span class="sw best"></span>Best · আরিফ</div><p>Very active — the fullest version.</p></div>
-        <div class="wc"><div class="t"><span class="sw good"></span>Good · নিশাত</div><p>A solid, typical student.</p></div>
-        <div class="wc"><div class="t"><span class="sw low"></span>Low · রাফি</div><p>Little activity — still encouraged, never empty.</p></div>
+        <h2><span class="b"></span>Three activity levels (shown on each screen)</h2>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:4px">Illustrative sample profiles, used to show how a screen adapts. Neutral by design — no student is “better”.</p>
+        <div class="who">
+          <div class="wc"><div class="t"><span class="sw hi"></span>High activity</div><p>Most slides, real badges, a full marksheet.</p></div>
+          <div class="wc"><div class="t"><span class="sw mid"></span>Moderate</div><p>Meaningful slides; thin ones omitted; no forced badges.</p></div>
+          <div class="wc"><div class="t"><span class="sw lim"></span>Limited</div><p>Honest numbers, no fake praise; under 5 active days → Fresh Start.</p></div>
+        </div>
+
+        <div class="legend">
+          <span class="lt">How to read this</span>
+          <span class="chip"><span class="dot fix"></span><b style="color:var(--ink);font-weight:600">PRD-fixed</b> — preserve as-is</span>
+          <span class="chip"><span class="dot open"></span><b style="color:var(--ink);font-weight:600">Design-open</b> — your call</span>
+          <span class="chip"><span class="dot flag"></span><b style="color:var(--ink);font-weight:600">Needs a Product decision</b></span>
+        </div>
+        <p style="font-size:.86rem;color:var(--faint);margin-top:10px">All Bangla below is <b>proposed</b> — Product/Brand approve final wording. Sample numbers in the mockups are not production content.</p>
       </div>
-      <p style="font-size:.9rem;color:var(--muted);margin-top:10px"><span class="pr" style="color:var(--navy);font-weight:700">●</span> Primary = always on the screen &nbsp;·&nbsp; <span class="sc" style="color:var(--ring);font-weight:700">○</span> Secondary = only when the data exists.</p>
-    </div>
-    <div>
-      <div class="phone"><div class="scr top">
-        <div class="ey">তোমার ২০২৬, এক খাতায়</div>
-        <div class="stamp" style="font-size:14px;transform:none">নিয়মিত পড়ুয়া</div>
-        <div class="rows"><div class="row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="row"><span>ক্লাস</span><span>৪৮টি</span></div><div class="row"><span>বিষয়</span><span>পদার্থবিজ্ঞান</span></div></div>
-        <div class="cta">শেয়ার করো</div>
-      </div></div>
-      <p style="text-align:center;color:var(--muted);font-size:.86rem;margin-top:10px">The shareable marksheet — the payoff.</p>
+      <div>
+        <div class="phone"><div class="scr top">
+          <div class="ey">তোমার ২০২৬, এক খাতায়</div>
+          <div class="stamp" style="font-size:14px;transform:none">নিয়মিত পড়ুয়া</div>
+          <div class="rows"><div class="row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="row"><span>লাইভ ক্লাস</span><span>৪৮টি</span></div><div class="row"><span>বিষয়</span><span>পদার্থবিজ্ঞান</span></div></div>
+          <div class="cta">শেয়ার করো</div>
+        </div></div>
+        <p style="text-align:center;color:var(--muted);font-size:.86rem;margin-top:10px">The shareable marksheet — where the flow lands.</p>
+      </div>
     </div>
   </div>
 
   <!-- TOC -->
   <div class="toc">
     <div class="th bn">সূচিপত্র</div>
-    <div class="ts">The screens, in order.</div>
+    <div class="ts">The screens, in order — plus the reference sections.</div>
     <div class="tgrid">
       <a class="tc" href="#s0"><span class="num">00</span><div><b>Home banner</b><span>the one tap in</span></div></a>
-      <a class="tc" href="#s1"><span class="num">01</span><div><b>Cover</b><span>name is the hero</span></div></a>
+      <a class="tc" href="#s1"><span class="num">01</span><div><b>Cover</b><span>name leads</span></div></a>
       <a class="tc" href="#s2"><span class="num">02</span><div><b>Study time</b><span>effort made visible</span></div></a>
-      <a class="tc" href="#s3"><span class="num">03</span><div><b>Attendance</b><span>showing up counts</span></div></a>
-      <a class="tc" href="#s4"><span class="num">04</span><div><b>Teacher</b><span>most-attended</span></div></a>
-      <a class="tc" href="#s5"><span class="num">05</span><div><b>Quiz</b><span>practice adds up</span></div></a>
-      <a class="tc" href="#s6"><span class="num">06</span><div><b>Video</b><span>the 2-minute case</span></div></a>
-      <a class="tc" href="#s7"><span class="num">07</span><div><b>Subject</b><span>focus, not marks</span></div></a>
-      <a class="tc" href="#s8"><span class="num">08</span><div><b>Biggest day</b><span>their peak day</span></div></a>
-      <a class="tc" href="#s9"><span class="num">09</span><div><b>Learner type ★</b><span>the peak moment</span></div></a>
+      <a class="tc" href="#s3"><span class="num">03</span><div><b>Attendance</b><span>a warm count</span></div></a>
+      <a class="tc" href="#s4"><span class="num">04</span><div><b>Teacher</b><span>most time with</span></div></a>
+      <a class="tc" href="#s5"><span class="num">05</span><div><b>Quiz</b><span>practice, no pressure</span></div></a>
+      <a class="tc" href="#s6"><span class="num">06</span><div><b>Video</b><span>watch time</span></div></a>
+      <a class="tc" href="#s7"><span class="num">07</span><div><b>Subject of the year</b><span>most time, not marks</span></div></a>
+      <a class="tc" href="#s8"><span class="num">08</span><div><b>Most-active day</b><span>their busiest day</span></div></a>
+      <a class="tc" href="#s9"><span class="num">09</span><div><b>Learner type ★</b><span>the reveal</span></div></a>
       <a class="tc" href="#s10"><span class="num">10</span><div><b>Marksheet</b><span>the payoff card</span></div></a>
-      <a class="tc" href="#s11"><span class="num">11</span><div><b>See you 2027</b><span>warm close</span></div></a>
-      <a class="tc" href="#scap"><span class="num">★</span><div><b>Capstone badge</b><span>rare, Best only</span></div></a>
-      <a class="tc" href="#sfresh"><span class="num">◇</span><div><b>Fresh Start</b><span>very low activity</span></div></a>
-      <a class="tc" href="#badges"><span class="num">🏅</span><div><b>The badges</b><span>names &amp; thresholds</span></div></a>
-      <a class="tc" href="#rules"><span class="num">✓</span><div><b>Rules</b><span>true everywhere</span></div></a>
+      <a class="tc" href="#s11"><span class="num">11</span><div><b>See you 2027</b><span>the close</span></div></a>
+      <a class="tc" href="#sfresh"><span class="num">◇</span><div><b>Fresh Start</b><span>under 5 active days</span></div></a>
+      <a class="tc" href="#types"><span class="num">◆</span><div><b>Learner types</b><span>the real set of 7</span></div></a>
+      <a class="tc" href="#badges"><span class="num">🏅</span><div><b>Badges</b><span>the real set of 4 + 1</span></div></a>
+      <a class="tc" href="#decisions"><span class="num">!</span><div><b>Open decisions</b><span>needs Product</span></div></a>
     </div>
   </div>
 
   <!-- 00 -->
   <section class="screen" id="s0">
     <div class="shd"><span class="snum">00</span><h2>Home banner</h2></div>
-    <p class="sdesc">The home-screen banner that starts the Wrap. <b>The same for everyone</b> — no Best/Good/Low here; it just has to be inviting enough to tap.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — identity + one button + one-time “new” cue</div><div><span class="sc">○ Secondary</span> — the name (never a number)</div></div>
-    <div style="max-width:300px;margin:16px auto 0"><div class="phone"><div class="scr"><div class="banner"><div class="be">✨ নতুন · Wrap ২০২৬</div><div class="bt">নিশাত, তোমার ২০২৬-এর গল্প তৈরি!</div><div class="be" style="color:#DCE1F7;font-weight:500">সারা বছরের পড়াশোনার গল্প, এক খাতায়।</div></div><div class="cta">আমার খাতা দেখি</div></div></div></div>
-    <div class="note"><b>To design:</b> the coming-soon sheet — shown when a paid student taps the banner before their Wrap is ready. Copy: <span class="bn">“শীঘ্রই আসছে — তোমার ২০২৬-এর খাতা তৈরি হচ্ছে।”</span> <span style="opacity:.8">Who sees the banner at all is decided by the backend from paid status — not a design task.</span></div>
+    <p class="sdesc"><b>Purpose:</b> the one entry point — a banner on the app home that makes a paid student want to tap in. Same for everyone (no activity-level variants).</p>
+    <p class="take"><b>Takeaway:</b> curiosity, not a stat. It should feel like <span class="bn">“কী আছে ভেতরে?”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show (PRD-fixed)</div><ul><li>Student’s <b>name</b> + one clear CTA</li><li>A one-time “new” cue so it reads as fresh</li><li>Who sees it is backend-driven from paid status — <em>not a design task</em></li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>Banner art, the “new” treatment, how it sits on the home</li><li>The coming-soon sheet (eligible but not generated yet)</li></ul></div>
+    </div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Headline</span><span class="cv">নিশাত, তোমার এই বছরটা একবার দেখে নাও।</span><span class="cs new">Revised</span></div>
+      <div class="crow"><span class="cl">Support</span><span class="cv">এই বছর যা যা করেছ, সব এক খাতায়।</span><span class="cs new">Revised</span></div>
+      <div class="crow"><span class="cl">CTA</span><span class="cv">আমার খাতা দেখি</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Coming-soon</span><span class="cv">শীঘ্রই আসছে — তোমার খাতা এখন তৈরি হচ্ছে।</span><span class="cs prop">Proposed</span></div>
+    </div>
+    <div style="max-width:300px;margin:16px auto 0"><div class="phone"><div class="scr"><div class="banner"><div class="be">✨ নতুন · Wrap ২০২৬</div><div class="bt">নিশাত, তোমার এই বছরটা একবার দেখে নাও।</div><div class="be" style="color:#DCE1F7;font-weight:500">এই বছর যা যা করেছ, সব এক খাতায়।</div></div><div class="cta">আমার খাতা দেখি</div></div></div></div>
+    <div class="note"><b>Changed from the old draft:</b> the headline <span class="bn">“তোমার ২০২৬-এর গল্প তৈরি!”</span> was replaced — it leaned on <span class="bn">গল্প</span> and read as generated. The new line invites a look without over-claiming.</div>
   </section>
 
   <!-- 01 -->
   <section class="screen" id="s1">
     <div class="shd"><span class="snum">01</span><h2>Cover</h2></div>
-    <p class="sdesc">The opening — this is their story, and the name is the hero.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>name</b>, year ২০২৬ + notebook</div><div><span class="sc">○ Secondary</span> — class &amp; group</div></div>
+    <p class="sdesc"><b>Purpose:</b> open the story. This is theirs — the name is the hero.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“এটা আমার বছর।”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li><b>Name</b>, the year <b>২০২৬</b>, Shikho identity</li><li>Class &amp; group <em>— drop the line if either is empty</em></li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>The notebook-opening moment, typography, how the name is framed</li></ul></div>
+    </div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Headline</span><span class="cv">শিখোতে তোমার ২০২৬</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Support</span><span class="cv">চলো, এই বছরটা একবার পিছনে ফিরে দেখি।</span><span class="cs new">Revised</span></div>
+      <div class="crow"><span class="cl">Labels</span><span class="cv">নাম · শ্রেণি · বিভাগ</span><span class="cs dyn">Dynamic</span></div>
+    </div>
     <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">শিখোতে তোমার</div><div class="big">২০২৬</div><div class="nm">আরিফ</div><div class="ey">দশম · বিজ্ঞান</div></div></div><p class="scap">Name, year, class — all there.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">শিখোতে তোমার</div><div class="big">২০২৬</div><div class="nm">নিশাত</div><div class="ey">দশম · বিজ্ঞান</div></div></div><p class="scap">The same — the name leads.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">শিখোতে তোমার</div><div class="big">২০২৬</div><div class="nm">রাফি</div></div></div><p class="scap">Class missing → that line just drops. No name → generic, never “null”.</p></div>
+      <div class="state"><span class="lab hi">High activity</span><div class="mphone"><div class="mscr"><div class="ey">শিখোতে তোমার</div><div class="big">২০২৬</div><div class="nm">নিশাত</div><div class="ey">দশম · বিজ্ঞান</div></div></div><p class="scap">Name, year, class — all present.</p></div>
+      <div class="state"><span class="lab mid">Moderate</span><div class="mphone"><div class="mscr"><div class="ey">শিখোতে তোমার</div><div class="big">২০২৬</div><div class="nm">নিশাত</div><div class="ey">দশম · বিজ্ঞান</div></div></div><p class="scap">Identical — the cover doesn’t change with activity.</p></div>
+      <div class="state"><span class="lab lim">Limited · no class data</span><div class="mphone"><div class="mscr"><div class="ey">শিখোতে তোমার</div><div class="big">২০২৬</div><div class="nm">রাফি</div></div></div><p class="scap"><b>Edge:</b> class/group missing → that line drops. No name → generic headline, never <span class="bn">“null”</span>.</p></div>
     </div>
   </section>
 
   <!-- 02 -->
   <section class="screen" id="s2">
     <div class="shd"><span class="snum">02</span><h2>Study time</h2></div>
-    <p class="sdesc">Invisible effort made visible — “this is how much I put in.”</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — the hours: <span class="bn">«এই বছর তুমি পড়েছ [X] ঘণ্টা»</span></div><div><span class="sc">○ Secondary</span> — the comparison: <span class="bn">«প্রায় [Y]টি ৬ ঘণ্টার পড়ার দিনের সমান!»</span></div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তুমি পড়েছ</div><div class="big">২১০</div><div class="unit">ঘণ্টা</div><div class="ey">প্রায় ৩৫টি ৬ ঘণ্টার পড়ার দিনের সমান!</div></div></div><p class="scap">Big number + the comparison.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তুমি পড়েছ</div><div class="big">১৪২</div><div class="unit">ঘণ্টা</div><div class="ey">প্রায় ২৪টি ৬ ঘণ্টার পড়ার দিনের সমান!</div></div></div><p class="scap">A healthy number, stated plainly.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তুমি পড়েছ</div><div class="big">৩৮</div><div class="unit">ঘণ্টা</div><div class="ey">শুরুটা দারুণ — চালিয়ে যাও!</div></div></div><p class="scap">Still shown, with a forward line. Never a “0”.</p></div>
+    <p class="sdesc"><b>Purpose:</b> make invisible effort visible — the hours they actually put in.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“এত সময় দিয়েছি, খেয়ালই করিনি।”</span> The number carries this — it doesn’t need a compliment on top.</p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li><b>Total hours</b> (hero)</li><li>Hidden if below the study-time threshold <em>(min_show)</em> — the slide drops, it isn’t faked</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>The number reveal; the “school-day” comparison as an optional secondary</li></ul></div>
     </div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Primary</span><span class="cv">এই বছর তুমি পড়েছ [X] ঘণ্টা</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Comparison</span><span class="cv">দিনে ৬ ঘণ্টা ধরলে, প্রায় [Y] দিনের সমান। <small>only when meaningful</small></span><span class="cs prop">Proposed</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">High activity</span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তুমি পড়েছ</div><div class="big">২১০</div><div class="unit">ঘণ্টা</div><div class="ey">দিনে ৬ ঘণ্টা ধরলে, প্রায় ৩৫ দিন।</div></div></div><p class="scap">Big number + a factual comparison.</p></div>
+      <div class="state"><span class="lab mid">Moderate</span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তুমি পড়েছ</div><div class="big">১৪২</div><div class="unit">ঘণ্টা</div><div class="ey">দিনে ৬ ঘণ্টা ধরলে, প্রায় ২৪ দিন।</div></div></div><p class="scap">A healthy number, stated plainly.</p></div>
+      <div class="state"><span class="lab lim">Limited</span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তুমি পড়েছ</div><div class="big">৩৮</div><div class="unit">ঘণ্টা</div></div></div><p class="scap"><b>Honest:</b> just the number — no “keep going”. If it’s below threshold, the slide drops instead.</p></div>
+    </div>
+    <div class="decision"><span class="dh">Needs a Product decision</span>The PRD proposes headline tiers <span class="bn">“অসাধারণ পরিশ্রম”</span> (≥200h) and <span class="bn">“শুরুটা দারুণ”</span> (&lt;50h). <b>Recommendation: drop the per-tier compliment.</b> Both use filler words the team flagged (<span class="bn">অসাধারণ · দারুণ</span>), and a low total shouldn’t be dressed up. Let the hours stand.</div>
   </section>
 
   <!-- 03 -->
   <section class="screen" id="s3">
     <div class="shd"><span class="snum">03</span><h2>Live-class attendance</h2></div>
-    <p class="sdesc">Reward showing up — a warm count, never a cold percentage.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>classes attended</b> + classes held</div><div><span class="sc">○ Secondary</span> — a badge, if earned: <span class="bn">ফার্স্ট বেঞ্চার</span> (≥৮৫%) or <span class="bn">নিয়মিত উপস্থিতি</span> (৬০–৮৪%)</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৬০</div><div class="unit">টি ক্লাস</div><div class="ribbon">🏅 ফার্স্ট বেঞ্চার</div></div></div><p class="scap">High count + an earned badge.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৪৮</div><div class="unit">টি ক্লাস</div><div class="ribbon">🏅 নিয়মিত উপস্থিতি</div></div></div><p class="scap">Strong count + a badge that fits.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৬</div><div class="unit">টি ক্লাস</div><div class="ey">নিয়মিত হতে চেষ্টা চালিয়ে যাও!</div></div></div><p class="scap">No unearned badge, just a kind line. Never a “0”.</p></div>
+    <p class="sdesc"><b>Purpose:</b> reward showing up — a warm count, not a cold percentage.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“আমি নিয়মিত ছিলাম।”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li><b>Classes attended</b> (hero) + classes held for context</li><li>The <b>ফার্স্ট বেঞ্চার</b> badge <em>only</em> at ≥85% attendance</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>Register / roll-call motif; how the badge appears when earned</li></ul></div>
     </div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Headline</span><span class="cv">লাইভ ক্লাসে তোমার উপস্থিতি</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Primary</span><span class="cv">[X]টি ক্লাসে অংশ নিয়েছ তুমি</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Badge</span><span class="cv">ফার্স্ট বেঞ্চার <small>only when earned (≥85%)</small></span><span class="cs brand">Brand</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">High · ≥85%</span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৬০</div><div class="unit">টি ক্লাস</div><div class="ribbon">🏅 ফার্স্ট বেঞ্চার</div></div></div><p class="scap">High count + the one earned badge.</p></div>
+      <div class="state"><span class="lab mid">Moderate · 71%</span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৪৮</div><div class="unit">টি ক্লাস</div><div class="ey">৬৮টি ক্লাসের মধ্যে</div></div></div><p class="scap"><b>No badge</b> below 85% — we don’t invent one. The count + held is the story.</p></div>
+      <div class="state"><span class="lab lim">Limited</span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৬</div><div class="unit">টি ক্লাস</div></div></div><p class="scap">Just the honest count. Below the attendance threshold → the slide drops.</p></div>
+    </div>
+    <div class="decision"><span class="dh">Corrected from the old draft</span>The old site showed a <span class="bn">“নিয়মিত উপস্থিতি (৬০–৮৪%)”</span> badge — <b>that tier is not in <span class="bn">wrap_tier_config</span></b>. The only attendance badge is <span class="bn">ফার্স্ট বেঞ্চার</span> at ≥85%. If a mid-tier badge is wanted, it’s a config + brand decision — see <a href="#decisions">Open decisions</a>.</div>
   </section>
 
   <!-- 04 -->
   <section class="screen" id="s4">
-    <div class="shd"><span class="snum alt">04</span><h2>Teacher</h2><span class="pill">Confirm first</span></div>
-    <p class="sdesc">A human moment — the teacher they spent the most live time with. Most-attended, not “favourite”.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — teacher name + the framing line <span class="bn">«যাঁর ক্লাসে সবচেয়ে বেশি ছিলে»</span></div><div><span class="sc">○ Secondary</span> — the avatar (photo → generic male/female → name)</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="ava photo">🧑🏽‍🏫</div><div class="nm">রাহেলা ম্যাম</div></div></div><p class="scap">Cleared photo + name.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="ava gm">👨🏽‍🏫</div><div class="nm">করিম স্যার</div></div></div><p class="scap">No photo → a generic <b>male</b> avatar (“স্যার”).</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="ava gf">👩🏽‍🏫</div><div class="nm">রুমানা ম্যাডাম</div></div></div><p class="scap">Still shown — a generic <b>female</b> avatar (“ম্যাডাম”) + name.</p></div>
+    <div class="shd"><span class="snum alt">04</span><h2>Teacher</h2><span class="pill"><span class="dot flag" style="width:8px;height:8px;border-radius:2px"></span>Confirm launch</span></div>
+    <p class="sdesc"><b>Purpose:</b> a human beat — the teacher they spent the most live time with. Most-attended, <b>not</b> “favourite”.</p>
+    <p class="take"><b>Takeaway:</b> a warm, familiar face from their year.</p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>Teacher <b>name</b> + the framing line (most time with)</li><li>Avatar fallback: photo → generic male/female → name only</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>Portrait framing, the generic-avatar artwork</li></ul></div>
     </div>
-    <div class="note">No teacher photo → the generic avatar (above). No reliable teacher at all → this one slide sits out; we never guess a wrong face.</div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Framing</span><span class="cv">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Reveal</span><span class="cv">[শিক্ষকের নাম]</span><span class="cs dyn">Dynamic</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">Has photo</span><div class="mphone"><div class="mscr"><div class="ey">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="ava photo">🧑🏽‍🏫</div><div class="nm">রাহেলা ম্যাম</div></div></div><p class="scap">Cleared photo + name.</p></div>
+      <div class="state"><span class="lab mid">No photo</span><div class="mphone"><div class="mscr"><div class="ey">যাঁর ক্লাসে সবচেয়ে বেশি ছিলে</div><div class="ava gm">👨🏽‍🏫</div><div class="nm">করিম স্যার</div></div></div><p class="scap">No photo → a generic <b>male</b> avatar.</p></div>
+      <div class="state"><span class="lab lim">No reliable teacher</span><div class="mphone"><div class="mscr skip"><div class="ey" style="opacity:.6">— এই স্লাইডটি দেখানো হয় না —</div></div></div><p class="scap"><b>Edge:</b> no reliable record → the slide sits out. We never guess a face.</p></div>
+    </div>
+    <div class="decision"><span class="dh">Needs a Product decision</span>Confirm Screen 04 is a <b>P0 launch</b> dependency (per PRD §I). If the teacher data isn’t ready for launch, hold this screen as planned rather than ship it thin.</div>
   </section>
 
   <!-- 05 -->
   <section class="screen" id="s5">
     <div class="shd"><span class="snum">05</span><h2>Quiz activity</h2></div>
-    <p class="sdesc">Learning through practice — no pressure, no fake competition.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — quizzes done <span class="bn">«এই বছর [X]টি কুইজ শেষ করেছ»</span> + near-miss nudge <span class="bn">«আর [n]টা হলেই [মাইলফলক]»</span> (only within 5 of the next tier)</div><div><span class="sc">○ Secondary</span> — a monthly chart + the <span class="bn">কুইজ যোদ্ধা</span> badge (১০০+)</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">কুইজে কেমন কাটল তোমার বছর?</div><div class="big">৯৫</div><div class="unit">টি কুইজ</div><div class="ey">আর ৫টা হলেই কুইজ যোদ্ধা!</div></div></div><p class="scap">Near a milestone, so we say so.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">কুইজে কেমন কাটল তোমার বছর?</div><div class="big">৮৭</div><div class="unit">টি কুইজ</div><div class="ey">সারা বছর অনুশীলন চালিয়ে গেছ।</div></div></div><p class="scap">Solid; the nudge only shows if she’s close.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">কুইজে কেমন কাটল তোমার বছর?</div><div class="big">৪</div><div class="unit">টি কুইজ</div><div class="ey">আগামী বছর আরও এগিয়ে যাও!</div></div></div><p class="scap">Encouraged — never an empty chart. Even zero gets a warm line.</p></div>
+    <p class="sdesc"><b>Purpose:</b> show practice adding up — no pressure, no fake competition.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“সারা বছর অনেকটা অনুশীলন হয়েছে।”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li><b>Quizzes completed</b> (hero)</li><li>Near-milestone nudge <em>only</em> when within reach of the next tier</li><li>The <b>কুইজ যোদ্ধা</b> badge at 100+</li><li>Hidden if under 5 quizzes <em>(min_show)</em></li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>A monthly mini-chart (optional secondary), the data-drawing motion</li></ul></div>
     </div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Headline</span><span class="cv">কুইজে কেমন কাটল তোমার বছর?</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Primary</span><span class="cv">এই বছর [X]টি কুইজ শেষ করেছ</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Near-milestone</span><span class="cv">আর [n]টা হলেই [মাইলফলক] <small>only within ~5 of the tier</small></span><span class="cs prop">Proposed</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">High · near a tier</span><div class="mphone"><div class="mscr"><div class="ey">কুইজে কেমন কাটল তোমার বছর?</div><div class="big">৯৫</div><div class="unit">টি কুইজ</div><div class="ey">আর ৫টা হলেই কুইজ যোদ্ধা।</div></div></div><p class="scap">Close to 100 — so we say so. A real, specific nudge.</p></div>
+      <div class="state"><span class="lab mid">Moderate</span><div class="mphone"><div class="mscr"><div class="ey">কুইজে কেমন কাটল তোমার বছর?</div><div class="big">৪৬</div><div class="unit">টি কুইজ</div></div></div><p class="scap">Just the count — not close to a tier, so no nudge, no filler.</p></div>
+      <div class="state"><span class="lab lim">Limited</span><div class="mphone"><div class="mscr"><div class="ey">কুইজে কেমন কাটল তোমার বছর?</div><div class="big">৭</div><div class="unit">টি কুইজ</div></div></div><p class="scap">The honest count. Under 5 → the slide drops entirely.</p></div>
+    </div>
+    <div class="note"><b>Changed:</b> removed <span class="bn">“আগামী বছর আরও এগিয়ে যাও!”</span> — it used a flagged word (<span class="bn">এগিয়ে যাও</span>) and added nothing the count didn’t already say.</div>
   </section>
 
   <!-- 06 -->
   <section class="screen" id="s6">
     <div class="shd"><span class="snum">06</span><h2>Video learning</h2></div>
-    <p class="sdesc">Make watch time relatable — “here’s what that feels like.” <b>This is the “2-minute” case.</b></p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>total watch time</b></div><div><span class="sc">○ Secondary</span> — a tangible comparison (in hours) + the <span class="bn">ভিডিও ম্যারাথনার</span> badge (১৫০০+ মিনিট)</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">ভিডিও দেখে শিখেছ</div><div class="big">১১৮০</div><div class="unit">মিনিট</div><div class="ey">প্রায় ২০ ঘণ্টা ভিডিওতে শেখা!</div></div></div><p class="scap">Big watch time, made tangible in hours.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">ভিডিও দেখে শিখেছ</div><div class="big">৯৬০</div><div class="unit">মিনিট</div><div class="ey">প্রায় ১৬ ঘণ্টা ভিডিওতে শেখা!</div></div></div><p class="scap">Plenty of watch time, in hours.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">ভিডিও দেখে শিখেছ</div><div class="big">২</div><div class="unit">মিনিট</div><div class="ey">শুরুটা হয়ে গেছে — ২০২৭-এ আরও!</div></div></div><p class="scap"><b>2 minutes</b> — shown quietly, with a forward line. Never skipped, never “0”.</p></div>
+    <p class="sdesc"><b>Purpose:</b> make watch time relatable — how much they actually learned by video.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“অনেকটা সময় ভিডিওতে শিখেছি।”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li><b>Total watch time</b> (hero)</li><li>The <b>ভিডিও ম্যারাথনার</b> badge at 1500+ min (~25h)</li><li><b>Hidden under 30 minutes</b> <em>(min_show)</em> — the thin case is a dropped slide, not spin</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>The relatable comparison, how it builds on screen</li></ul></div>
     </div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Primary</span><span class="cv">ভিডিও দেখে শিখেছ [X] মিনিট</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Comparison</span><span class="cv">প্রায় [Y] ঘণ্টা ভিডিওতে শেখা। <small>hours, when meaningful</small></span><span class="cs new">Revised</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">High</span><div class="mphone"><div class="mscr"><div class="ey">ভিডিও দেখে শিখেছ</div><div class="big">১৬২০</div><div class="unit">মিনিট</div><div class="ribbon">🏅 ভিডিও ম্যারাথনার</div></div></div><p class="scap">1500+ min → the badge, and ~27 hours made tangible.</p></div>
+      <div class="state"><span class="lab mid">Moderate</span><div class="mphone"><div class="mscr"><div class="ey">ভিডিও দেখে শিখেছ</div><div class="big">৯৬০</div><div class="unit">মিনিট</div><div class="ey">প্রায় ১৬ ঘণ্টা ভিডিওতে শেখা।</div></div></div><p class="scap">Plenty of watch time, expressed in hours.</p></div>
+      <div class="state"><span class="lab lim">Limited · 2 min</span><div class="mphone"><div class="mscr skip"><div class="ey" style="opacity:.6">— এই স্লাইডটি দেখানো হয় না —</div></div></div><p class="scap"><b>Honest:</b> 2 minutes is below the 30-min threshold → the slide drops. We don’t call 2 minutes an achievement.</p></div>
+    </div>
+    <div class="note"><b>Why hours, not movies:</b> the PRD proposes <span class="bn">“প্রায় [Y]টি সিনেমা!”</span> We use hours instead — for a learning product, an hours comparison is accurate and dignified where a movie count reads as flippant.</div>
   </section>
 
   <!-- 07 -->
   <section class="screen" id="s7">
-    <div class="shd"><span class="snum">07</span><h2>Strongest subject</h2></div>
-    <p class="sdesc">The subject they leaned into most — about focus and time, not marks.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>the subject name</b> + “most active”</div><div><span class="sc">○ Secondary</span> — the next 1–2 subjects</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার বছরের বিষয়</div><div class="nm" style="font-size:20px">পদার্থবিজ্ঞান</div><div class="ey">এরপর গণিত · রসায়ন</div></div></div><p class="scap">Top subject + the next couple.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার বছরের বিষয়</div><div class="nm" style="font-size:20px">পদার্থবিজ্ঞান</div><div class="ey">এই বিষয়েই তুমি সবচেয়ে বেশি সময় দিয়েছ</div></div></div><p class="scap">A clear top subject.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার বছরের বিষয়</div><div class="nm" style="font-size:20px">গণিত</div><div class="ey">এই বিষয়েই তুমি সবচেয়ে বেশি সময় দিয়েছ</div></div></div><p class="scap">His most-active subject. About focus, not a rank.</p></div>
+    <div class="shd"><span class="snum">07</span><h2>Subject of the year <span style="font-size:.8rem;color:var(--faint);font-weight:400">(most time)</span></h2></div>
+    <p class="sdesc"><b>Purpose:</b> the subject they leaned into most. This is about <b>time spent, not marks</b> — it is the max-activity subject, not the “strongest”.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“এই বিষয়েই আমি সবচেয়ে বেশি ডুবে ছিলাম।”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>The <b>subject name</b> + “most time” framing</li><li>Omitted if subject data is unreliable or tied — never a doubtful value</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>Subject colour/tile motif; whether to show the next 1–2 subjects</li></ul></div>
     </div>
-    <div class="note">No reliable top subject, or a tie → this one slide sits out rather than guess.</div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Headline</span><span class="cv">তোমার বছরের বিষয়</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Reveal</span><span class="cv">[বিষয়ের নাম]</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Support</span><span class="cv">এই বিষয়েই তুমি সবচেয়ে বেশি সময় দিয়েছ।</span><span class="cs prop">Proposed</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">High</span><div class="mphone"><div class="mscr"><div class="ey">তোমার বছরের বিষয়</div><div class="nm" style="font-size:20px">পদার্থবিজ্ঞান</div><div class="ey">এরপর গণিত · রসায়ন</div></div></div><p class="scap">Top subject + the next couple (optional).</p></div>
+      <div class="state"><span class="lab mid">Moderate</span><div class="mphone"><div class="mscr"><div class="ey">তোমার বছরের বিষয়</div><div class="nm" style="font-size:20px">গণিত</div><div class="ey">এই বিষয়েই তুমি সবচেয়ে বেশি সময় দিয়েছ।</div></div></div><p class="scap">A clear top subject, framed as focus.</p></div>
+      <div class="state"><span class="lab lim">Unreliable / tied</span><div class="mphone"><div class="mscr skip"><div class="ey" style="opacity:.6">— এই স্লাইডটি দেখানো হয় না —</div></div></div><p class="scap"><b>Edge:</b> no reliable top subject, or a tie → the slide sits out.</p></div>
+    </div>
+    <div class="note"><b>Accuracy:</b> renamed from “Strongest subject”. Per PRD §I, this is the <b>maximum-activity</b> subject (time), not accuracy — so the copy says “most time”, never “best”.</div>
   </section>
 
   <!-- 08 -->
   <section class="screen" id="s8">
-    <div class="shd"><span class="snum">08</span><h2>Biggest day</h2></div>
-    <p class="sdesc">A delightful highlight — the single day they were most into it.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>the date</b> + “most-active day”</div><div><span class="sc">○ Secondary</span> — time that day · calendar motif</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার বছরের সেরা দিন</div><div class="nm" style="font-size:20px">১৪ মার্চ</div><div class="ey">সেদিন ৫ ঘণ্টা শিখেছ!</div></div></div><p class="scap">The date + the time that day.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার বছরের সেরা দিন</div><div class="nm" style="font-size:20px">১৪ মার্চ</div><div class="ey">এই দিনেই তুমি সবচেয়ে বেশি সময় কাটিয়েছ</div></div></div><p class="scap">Her standout day.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার বছরের সেরা দিন</div><div class="nm" style="font-size:20px">৯ জুলাই</div><div class="ey">এই দিনেই তুমি সবচেয়ে বেশি সময় কাটিয়েছ</div></div></div><p class="scap">Even a quiet year has a biggest day. No pressure.</p></div>
+    <div class="shd"><span class="snum">08</span><h2>Most-active day</h2></div>
+    <p class="sdesc"><b>Purpose:</b> a small delight — the single day they spent the most time in the app.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“ওই দিনটায় আমি সত্যিই ডুবে ছিলাম।”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>The <b>date</b> + that it was their most-active day</li><li>Omitted if there’s no clear peak (flat activity)</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>Calendar / day motif; whether to show the time that day</li></ul></div>
     </div>
-    <div class="note">No stand-out day at all (flat activity) → this one slide sits out.</div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Headline</span><span class="cv">এই বছর তোমার সবচেয়ে ব্যস্ত দিন</span><span class="cs new">Revised</span></div>
+      <div class="crow"><span class="cl">Reveal</span><span class="cv">[তারিখ]</span><span class="cs dyn">Dynamic</span></div>
+      <div class="crow"><span class="cl">Support</span><span class="cv">এই দিনেই তুমি সবচেয়ে বেশি সময় কাটিয়েছ।</span><span class="cs prop">Proposed</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">High</span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তোমার সবচেয়ে ব্যস্ত দিন</div><div class="nm" style="font-size:20px">১৪ মার্চ</div><div class="ey">সেদিন ৫ ঘণ্টা শিখেছ।</div></div></div><p class="scap">The date + the time that day.</p></div>
+      <div class="state"><span class="lab mid">Moderate</span><div class="mphone"><div class="mscr"><div class="ey">এই বছর তোমার সবচেয়ে ব্যস্ত দিন</div><div class="nm" style="font-size:20px">৯ জুলাই</div><div class="ey">এই দিনেই তুমি সবচেয়ে বেশি সময় দিয়েছ।</div></div></div><p class="scap">Even a quieter year has one standout day.</p></div>
+      <div class="state"><span class="lab lim">No clear peak</span><div class="mphone"><div class="mscr skip"><div class="ey" style="opacity:.6">— এই স্লাইডটি দেখানো হয় না —</div></div></div><p class="scap"><b>Edge:</b> flat activity, no clear peak → the slide sits out.</p></div>
+    </div>
+    <div class="note"><b>Accuracy:</b> the PRD’s <span class="bn">“সেরা দিন”</span> (best day) overclaims — this is the <b>busiest</b> day by app time, not their “best”. Headline revised to “most-active day”.</div>
   </section>
 
   <!-- 09 -->
   <section class="screen" id="s9">
-    <div class="shd"><span class="snum alt">09</span><h2>Learner type <span style="color:var(--ring)">★</span></h2><span class="pill" style="background:var(--ring-s);color:var(--ring)">The peak</span></div>
-    <p class="sdesc">The signature moment — a personal identity from how they studied. The most shareable screen.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — the type stamp + a one-line reason from their stats (active days · weekly average · streak)</div><div><span class="sc">○ Secondary</span> — active-days / streak (<span class="bn">স্ট্রিক মাস্টার</span> at ২১+ days)</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন কী?</div><div class="stamp">একনিষ্ঠ</div><div class="ey">১৮০ দিন নিয়ম করে শিখেছ</div></div></div><p class="scap">A strong type + a real streak.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন কী?</div><div class="stamp">নিয়মিত পড়ুয়া</div><div class="ey">সারা বছর নিয়ম করে পড়েছ</div></div></div><p class="scap">No type beats another.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন কী?</div><div class="stamp">ভারসাম্যপূর্ণ</div><div class="ey">তোমার জন্য আছে একটি পরিচয়</div></div></div><p class="scap">Never blank — a safe default type.</p></div>
+    <div class="shd"><span class="snum alt">09</span><h2>Learner type <span style="color:var(--open)">★</span></h2><span class="pill peak">The reveal</span></div>
+    <p class="sdesc"><b>Purpose:</b> the signature screen — a stamp naming <i>how</i> they studied. Identity travels; this is the most shareable moment.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“নিজের সম্পর্কে নতুন কিছু জানলাম।”</span> Every type must come with a <b>real, specific reason from their data</b> — never “you have an identity”.</p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>One <b>type stamp</b> from the validated set (the real 7 — see <a href="#types">below</a>)</li><li>A <b>reason line = the stat behind that type</b></li><li>Active days / streak as support (streak only if ≥3 days)</li><li>Under 5 active days → not typed → <a href="#sfresh">Fresh Start</a></li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>The stamp artwork (all types equally positive), the reveal beat, pre/post-reveal and repeat-view states — all working with motion off</li></ul></div>
     </div>
-    <div class="note"><b>The type</b> is assigned from how they studied (cohort-relative). Full set: <span class="bn">নিয়মিত পড়ুয়া · পরিশ্রমী · নির্ভুল পড়ুয়া · ক্ষিপ্র সমাধানকারী · অনুসন্ধানী · ভিডিও পড়ুয়া · রাতজাগা পড়ুয়া · ভারসাম্যপূর্ণ</span> (safe default). <b>The reason line</b> is the stat behind that type — e.g. <span class="bn">নিয়মিত পড়ুয়া → «১৮০ দিন নিয়ম করে শিখেছ»</span>, <span class="bn">পরিশ্রমী → total hours</span>, <span class="bn">ভিডিও পড়ুয়া → video share</span>. Under-5-active-day students skip this (→ Fresh Start). Build five states: pre-reveal, reveal, revealed, repeat-view, fallback; works with motion off.</div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Headline</span><span class="cv">তোমার শেখার ধরন কী?</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Setup</span><span class="cv">সারা বছর কীভাবে পড়েছ, সেটা দেখেই এই ধরন।</span><span class="cs new">Revised</span></div>
+      <div class="crow"><span class="cl">Reveal</span><span class="cv">[শিক্ষার্থীর ধরন] + কারণ-লাইন</span><span class="cs brand">Brand</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">High · রিদম</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">নিয়মিত পড়ুয়া</div><div class="ey">বছরজুড়ে ১৮০ দিন শিখেছ</div></div></div><p class="scap">The reason line matches the <b>axis</b> — here, active days.</p></div>
+      <div class="state"><span class="lab mid">Moderate · ফোকাস</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">একনিষ্ঠ</div><div class="ey">একটা বিষয়েই গভীরভাবে ছিলে</div></div></div><p class="scap">No type beats another — just a different, true trait.</p></div>
+      <div class="state"><span class="lab lim">Limited · balanced</span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">ভারসাম্যপূর্ণ</div><div class="ey">সব দিকেই মোটামুটি সমান সময় দিয়েছ</div></div></div><p class="scap"><b>Honest default</b> — given only when no trait stands out, <i>not</i> as a data-gap filler (see note).</p></div>
+    </div>
+    <div class="decision"><span class="dh">Corrected + needs a Product decision</span>The old draft used <span class="bn">একনিষ্ঠ</span> with a <i>streak</i> reason (mismatched), and listed <span class="bn">নির্ভুল পড়ুয়া</span> / <span class="bn">ক্ষিপ্র সমাধানকারী</span> — <b>neither is in the shipping <span class="bn">wrap_type_rule</span></b>, and both need accuracy/speed data the reviewer rightly questioned. The real set is the <a href="#types">7 below</a>. Two live calls: <b>(a)</b> confirm <span class="bn">রাতজাগা পড়ুয়া</span> ships only if hour-band data is reliable (else drop that axis); <b>(b)</b> confirm <span class="bn">ভারসাম্যপূর্ণ</span> reads as a positive “well-rounded”, since it’s assigned when every trait is near-average (Fresh-Start students are excluded from typing, so it isn’t a low-data dumping ground).</div>
   </section>
 
   <!-- 10 -->
   <section class="screen" id="s10">
-    <div class="shd"><span class="snum alt">10</span><h2>Shareable marksheet</h2><span class="pill" style="background:var(--ring-s);color:var(--ring)">The payoff</span></div>
-    <p class="sdesc">The whole year on one card they want to save or send. Must not look like a result sheet.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>২০২৬ + type + core rows</b> + share</div><div><span class="sc">○ Secondary</span> — subject · badges · loyalty · photo (in-app)</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr top"><div class="ey">তোমার ২০২৬, এক খাতায়</div><div class="stamp" style="font-size:11px;transform:none">একনিষ্ঠ</div><div class="rows"><div class="row"><span>পড়াশোনা</span><span>২১০ ঘণ্টা</span></div><div class="row"><span>ক্লাস</span><span>৬০টি</span></div><div class="row"><span>ব্যাজ</span><span>🏅 সেরার সেরা</span></div></div><div class="cta">শেয়ার করো</div></div></div><p class="scap">Full card + the rare capstone.</p></div>
-      <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr top"><div class="ey">তোমার ২০২৬, এক খাতায়</div><div class="stamp" style="font-size:11px;transform:none">নিয়মিত পড়ুয়া</div><div class="rows"><div class="row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="row"><span>ক্লাস</span><span>৪৮টি</span></div><div class="row"><span>বিষয়</span><span>পদার্থবিজ্ঞান</span></div></div><div class="cta">শেয়ার করো</div></div></div><p class="scap">Core rows + type. No capstone.</p></div>
-      <div class="state low"><span class="lab low">Low <span class="who2">রাফি</span></span><div class="mphone"><div class="mscr top"><div class="ey">তোমার ২০২৬, এক খাতায়</div><div class="stamp" style="font-size:11px;transform:none">ভারসাম্যপূর্ণ</div><div class="rows"><div class="row"><span>পড়াশোনা</span><span>৩৮ ঘণ্টা</span></div><div class="row"><span>ক্লাস</span><span>৬টি</span></div></div><div class="cta">শেয়ার করো</div></div></div><p class="scap">A real card too — empty rows left out, not shown as “--”.</p></div>
+    <div class="shd"><span class="snum alt">10</span><h2>Shareable marksheet</h2><span class="pill peak">The payoff</span></div>
+    <p class="sdesc"><b>Purpose:</b> the whole year on one card they want to save or send — the most credible ad we have (students buy from students).</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“এটা আমি শেয়ার করতে চাই।”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li><b>২০২৬ + learner-type + core highlight rows</b> + share</li><li>Earned badges / best subject only if genuine; empty rows omitted (never “--”)</li><li><b>Export is privacy-safe</b> — no name, photo, school or rank by default</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>Notebook page vs keepsake certificate — <b>your creative call</b>, within Direction B</li><li>How rows assemble into the card; the in-app vs export layouts</li></ul></div>
     </div>
-    <div class="note"><b>Two versions.</b> The <b>in-app card</b> shows name &amp; photo (or a generic avatar if none). The <b>shared image</b> hides name, photo, school &amp; rank by default — the link is public and many students are minors. Fixed 1080×1920.</div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Headline</span><span class="cv">তোমার ২০২৬, এক খাতায়</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">CTA</span><span class="cv">শেয়ার করো</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Privacy note</span><span class="cv">কার্ডে তোমার নাম, স্কুল বা র‍্যাংক থাকে না।</span><span class="cs prop">Proposed</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">High · in-app</span><div class="mphone"><div class="mscr top"><div class="ey">তোমার ২০২৬, এক খাতায়</div><div class="stamp" style="font-size:11px;transform:none">নিয়মিত পড়ুয়া</div><div class="rows"><div class="row"><span>পড়াশোনা</span><span>২১০ ঘণ্টা</span></div><div class="row"><span>লাইভ ক্লাস</span><span>৬০টি</span></div><div class="row"><span>ব্যাজ</span><span>🏅 ৩টি</span></div></div><div class="cta">শেয়ার করো</div></div></div><p class="scap">Full card with real badges + name/photo (in-app only).</p></div>
+      <div class="state"><span class="lab mid">Moderate</span><div class="mphone"><div class="mscr top"><div class="ey">তোমার ২০২৬, এক খাতায়</div><div class="stamp" style="font-size:11px;transform:none">একনিষ্ঠ</div><div class="rows"><div class="row"><span>পড়াশোনা</span><span>১৪২ ঘণ্টা</span></div><div class="row"><span>লাইভ ক্লাস</span><span>৪৮টি</span></div><div class="row"><span>বিষয়</span><span>গণিত</span></div></div><div class="cta">শেয়ার করো</div></div></div><p class="scap">Core rows + type. No forced badges.</p></div>
+      <div class="state"><span class="lab lim">Limited · export</span><div class="mphone"><div class="mscr top"><div class="ey">তোমার ২০২৬, এক খাতায়</div><div class="stamp" style="font-size:11px;transform:none">ভারসাম্যপূর্ণ</div><div class="rows"><div class="row"><span>পড়াশোনা</span><span>৩৮ ঘণ্টা</span></div><div class="row"><span>লাইভ ক্লাস</span><span>৬টি</span></div></div><div class="cta">শেয়ার করো</div></div></div><p class="scap">A real card too — empty rows left out, not shown as “0”. Export hides identity.</p></div>
+    </div>
+    <div class="decision"><span class="dh">Creative tension to resolve</span>The concept is a <span class="bn">খাতা/মার্কশিট</span>, yet it <b>must not read like an exam result sheet</b> (PRD). That’s a real contradiction left open on purpose — explore notebook-page vs collectible-certificate so it feels like a <b>keepsake, not a grade</b>. Two fixed constraints only: the export is identity-safe, and in-app vs export are clearly different artifacts (1080×1920 export).</div>
   </section>
 
   <!-- 11 -->
   <section class="screen" id="s11">
     <div class="shd"><span class="snum">11</span><h2>See you in 2027</h2></div>
-    <p class="sdesc">A warm, forward close that pulls them back — the retention beat. Everyone sees it.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — the closing line <span class="bn">«তোমার ২০২৬ শেষ — ২০২৭-এ দেখা হবে নতুন গল্পে!»</span> + CTA <span class="bn">«শেখা চালিয়ে যাও»</span></div><div><span class="sc">○ Secondary</span> — share-again</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best / Good</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:16px">তোমার ২০২৬ শেষ —<br>২০২৭-এ দেখা হবে নতুন গল্পে!</div><div class="cta">শেখা চালিয়ে যাও</div></div></div><p class="scap">Warm close + continue + share-again.</p></div>
-      <div class="state low"><span class="lab low">Low / Fresh Start</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:17px">তোমার যাত্রা<br>সবে শুরু!</div><div class="cta">শেখা চালিয়ে যাও</div></div></div><p class="scap">A gentler line — but everyone lands here. Works with motion off.</p></div>
-      <div class="state good" style="display:flex;flex-direction:column;justify-content:center"><p class="scap" style="margin:0"><b style="color:var(--ink)">One screen, same for all.</b><br>Only the closing line softens for quieter students; the structure doesn’t change.</p></div>
+    <p class="sdesc"><b>Purpose:</b> a warm, forward close that returns them to the app — this is the retention beat. Everyone sees it.</p>
+    <p class="take"><b>Takeaway:</b> <span class="bn">“পরের বছর আবার আসব।”</span></p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>A warm closing line + a clear continue action</li><li>Works for everyone, incl. Fresh Start (gentler line)</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>The খাতা closing / 2027 opening; share-again as secondary</li></ul></div>
     </div>
-  </section>
-
-  <!-- CAPSTONE -->
-  <section class="screen" id="scap">
-    <div class="shd"><span class="snum gold">★</span><h2>Rare capstone badge</h2><span class="pill">Best only</span></div>
-    <p class="sdesc">For a true all-rounder — “almost nobody gets this, and you did.” <b>Only the Best unlock it.</b></p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>a distinct, elevated reveal</b> that tops the marksheet</div></div>
-    <div class="states">
-      <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr" style="background:linear-gradient(180deg,#FFF7E0,#FDEFC6)"><div style="font-size:28px">🏅</div><div class="nm" style="color:#B5820A;font-size:16px">সেরার সেরা</div><div class="ey">খুব কম শিক্ষার্থী এটা অর্জন করে</div></div></div><p class="scap">Unlocked — gold/holographic, its own moment.</p></div>
-      <div class="state good"><span class="lab good">Good / Low</span><div class="mphone"><div class="mscr" style="background:var(--ground)"><div style="font-size:24px;opacity:.4">★</div><div class="ey">দেখানো হয় না</div></div></div><p class="scap">Not unlocked — and no “almost there” tease.</p></div>
-      <div class="state low" style="display:flex;flex-direction:column;justify-content:center"><p class="scap" style="margin:0;color:var(--muted)"><b style="color:var(--ink)">Keep it rare.</b><br>It appears only when a student clears the top tier of nearly every badge — that’s what makes it mean something.</p></div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Closing line</span><span class="cv">২০২৬ এখানেই শেষ। ২০২৭-এ আবার দেখা হবে।</span><span class="cs new">Revised</span></div>
+      <div class="crow"><span class="cl">Primary CTA</span><span class="cv">শেখা চালিয়ে যাও</span><span class="cs prop">Proposed</span></div>
+      <div class="crow"><span class="cl">Fresh Start line</span><span class="cv">এবারের শুরুটা ছোট — ২০২৭-এ পুরো বছরটা তোমার সামনে।</span><span class="cs new">Revised</span></div>
     </div>
+    <div class="states">
+      <div class="state"><span class="lab hi">Everyone</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:16px">২০২৬ এখানেই শেষ।<br>২০২৭-এ আবার দেখা হবে।</div><div class="cta">শেখা চালিয়ে যাও</div></div></div><p class="scap">Warm, plain, forward — continue + share-again.</p></div>
+      <div class="state"><span class="lab lim">Fresh Start close</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:14px">এবারের শুরুটা ছোট —<br>২০২৭-এ পুরো বছরটা<br>তোমার সামনে।</div><div class="cta">শেখা চালিয়ে যাও</div></div></div><p class="scap">Same structure, a gentler line.</p></div>
+      <div class="state" style="display:flex;flex-direction:column;justify-content:center"><p class="scap" style="margin:0"><b>One screen, same for all.</b><br>Only the line softens for quieter students; the layout doesn’t change. Fully works with motion off.</p></div>
+    </div>
+    <div class="note"><b>Changed:</b> the PRD’s <span class="bn">“২০২৭-এ দেখা হবে নতুন গল্পে!”</span> was replaced — <span class="bn">গল্প</span> was on the flagged list and the line read as generated.</div>
   </section>
 
   <!-- FRESH START -->
   <section class="screen" id="sfresh">
-    <div class="shd"><span class="snum alt">◇</span><h2>Fresh Start deck</h2><span class="pill">Very low activity</span></div>
-    <p class="sdesc">For students with under 5 active days — a short, kind <b>2-slide deck</b>, not a set of empty stat screens.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — a cover + an encouraging close (that’s the whole deck)</div></div>
-    <div class="states">
-      <div class="state low"><span class="lab low">Slide 1</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:16px">তোমার শেখার গল্পটা<br>সবে শুরু হয়েছে</div></div></div><p class="scap">A warm cover — no numbers.</p></div>
-      <div class="state low"><span class="lab low">Slide 2</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:15px">২০২৭-এ অপেক্ষা করছে<br>নতুন সম্ভাবনা</div><div class="cta">শেখা শুরু করো</div></div></div><p class="scap">An encouraging close + a gentle CTA.</p></div>
-      <div class="state good" style="display:flex;flex-direction:column;justify-content:center"><p class="scap" style="margin:0;color:var(--muted)"><b style="color:var(--ink)">Who gets it:</b><br>paid students with under 5 active days (incl. zero). No stats, no charts, no fake progress. Nobody who paid feels left out.</p></div>
+    <div class="shd"><span class="snum alt">◇</span><h2>Fresh Start deck</h2><span class="pill">Under 5 active days</span></div>
+    <p class="sdesc"><b>Purpose:</b> for students with under 5 active days — a short, kind <b>2-slide deck</b>, not a set of empty stat screens. No stats, no charts, no fake progress; nobody who paid feels left out.</p>
+    <div class="split">
+      <div class="sp fix"><div class="h"><span class="dot fix"></span>Must show</div><ul><li>Exactly a cover + an encouraging close — the whole deck</li><li>No learner-type is forced; no numbers</li></ul></div>
+      <div class="sp open"><div class="h"><span class="dot open"></span>Open to design</div><ul><li>The two slides’ warmth and art — calm, not a consolation prize</li></ul></div>
     </div>
+    <div class="copy">
+      <div class="ch">Proposed copy</div>
+      <div class="crow"><span class="cl">Cover</span><span class="cv">তোমার শেখা সবে শুরু হলো।</span><span class="cs new">Revised</span></div>
+      <div class="crow"><span class="cl">Close</span><span class="cv">২০২৭-এ পুরো বছরটা তোমার সামনে।</span><span class="cs new">Revised</span></div>
+    </div>
+    <div class="states">
+      <div class="state"><span class="lab lim">Slide 1 · cover</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:16px">তোমার শেখা<br>সবে শুরু হলো।</div></div></div><p class="scap">A warm cover — no numbers.</p></div>
+      <div class="state"><span class="lab lim">Slide 2 · close</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:15px">২০২৭-এ পুরো বছরটা<br>তোমার সামনে।</div><div class="cta">শেখা শুরু করো</div></div></div><p class="scap">An encouraging close + a gentle CTA.</p></div>
+      <div class="state" style="display:flex;flex-direction:column;justify-content:center"><p class="scap" style="margin:0"><b>Who gets it:</b><br>paid students with under 5 active days (incl. zero). The Scope tab decides drop-a-slide vs full Fresh Start — don’t invent a long deck of placeholder screens.</p></div>
+    </div>
+    <div class="note"><b>Changed:</b> replaced <span class="bn">“তোমার শেখার গল্পটা সবে শুরু হয়েছে”</span> and <span class="bn">“২০২৭-এ অপেক্ষা করছে নতুন সম্ভাবনা”</span> — both used flagged words (<span class="bn">গল্প · সম্ভাবনা</span>) and the reviewer named them as AI-sounding.</div>
+  </section>
+
+  <!-- LEARNER TYPES -->
+  <section class="screen" id="types">
+    <div class="shd"><span class="snum alt">◆</span><h2>Learner types — the real set</h2></div>
+    <p class="sdesc">One stamp per student, chosen <b>relative to the cohort</b> (the trait they’re most extreme on, by z-score). This is the actual seeded <span class="bn">wrap_type_rule</span> — <b>7 types</b>, not the longer draft list. Each ships with a reason line tied to its axis, so no claim is unsupported.</p>
+    <div class="ttable">
+      <div class="trow"><span>Type</span><span>What it means · reason line</span><span>Needs</span></div>
+      <div class="trow"><span class="tn">নিয়মিত পড়ুয়া</span><span class="td">Rhythm — showed up regularly. <span class="bn">«বছরজুড়ে ১৮০ দিন শিখেছ»</span></span><span class="tr">active dates</span></div>
+      <div class="trow"><span class="tn">পরিশ্রমী</span><span class="td">Intensity — put in the most total time. <span class="bn">«সবচেয়ে বেশি সময় দিয়েছ পড়াতেই»</span></span><span class="tr">study seconds</span></div>
+      <div class="trow"><span class="tn">একনিষ্ঠ</span><span class="td">Focus (high) — went deep on one subject. <span class="bn">«একটা বিষয়েই গভীরভাবে ছিলে»</span></span><span class="tr">subject mix</span></div>
+      <div class="trow"><span class="tn">অনুসন্ধানী</span><span class="td">Focus (low) — spread across many subjects. <span class="bn">«অনেক বিষয়ে ঘুরে শিখেছ»</span></span><span class="tr">subject mix</span></div>
+      <div class="trow"><span class="tn">অনুশীলনকারী</span><span class="td">Method — practised more than they watched. <span class="bn">«দেখার চেয়ে নিজে অনুশীলন করেছ বেশি»</span></span><span class="tr">active vs video</span></div>
+      <div class="trow verify"><span class="tn">রাতজাগা পড়ুয়া</span><span class="td">Clock — most study happened at night. <span class="bn">«বেশির ভাগ পড়াই রাতে»</span></span><span class="tr">hour-band · VERIFY</span></div>
+      <div class="trow"><span class="tn">ভারসাম্যপূর্ণ</span><span class="td">Default — no single trait stood out. <span class="bn">«সব দিকেই মোটামুটি সমান»</span></span><span class="tr">assigned when all |z|&lt;0.5</span></div>
+    </div>
+    <div class="note">The draft types <span class="bn">নির্ভুল পড়ুয়া</span> (accuracy) and <span class="bn">ক্ষিপ্র সমাধানকারী</span> (solving speed) are <b>not</b> in the shipping config — they needed data the reviewer flagged as unreliable, so they’re already out. All types read as <b>equally positive</b>; none is “better”. Fresh-Start students (under 5 active days) are not typed at all.</div>
   </section>
 
   <!-- BADGES -->
   <section class="screen" id="badges">
-    <div class="shd"><span class="snum gold">🏅</span><h2>The badges</h2></div>
-    <p class="sdesc">The full set the Wrap can award. A badge is earned when a metric clears its tier — only the <b>highest tier per metric</b> shows, and there’s never a “locked” shelf.</p>
+    <div class="shd"><span class="snum gold">🏅</span><h2>Badges — the real set</h2></div>
+    <p class="sdesc">The full set the Wrap awards, from the seeded <span class="bn">wrap_tier_config</span>: <b>4 badges + 1 rare capstone</b>. A badge shows only when its metric clears the bar — <b>highest tier per metric</b>, and never a “locked” shelf.</p>
     <div class="bgrid">
       <div class="bcard"><div class="bn2">🏅 ফার্স্ট বেঞ্চার</div><p>লাইভ ক্লাসে উপস্থিতি ≥ ৮৫%</p></div>
-      <div class="bcard"><div class="bn2">🎀 নিয়মিত উপস্থিতি</div><p>উপস্থিতি ৬০–৮৪%</p></div>
       <div class="bcard"><div class="bn2">🏅 কুইজ যোদ্ধা</div><p>১০০+ কুইজ শেষ</p></div>
-      <div class="bcard"><div class="bn2">🏆 কুইজ চ্যাম্পিয়ন</div><p>১৫০+ কুইজ (top tier)</p></div>
       <div class="bcard"><div class="bn2">🏅 ভিডিও ম্যারাথনার</div><p>১৫০০+ মিনিট (≈ ২৫ ঘণ্টা) ভিডিও</p></div>
-      <div class="bcard"><div class="bn2">🏅 স্ট্রিক মাস্টার</div><p>টানা ২১+ দিন সক্রিয়</p></div>
-      <div class="bcard cap"><div class="bn2">⭐ সেরার সেরা <em>capstone · rare</em></div><p>প্রায় সব ব্যাজের top tier যে ছোঁয়</p></div>
+      <div class="bcard"><div class="bn2">🏅 স্ট্রিক মাস্টার</div><p>টানা ২১+ দিন সক্রিয় (longest streak)</p></div>
+      <div class="bcard cap" style="grid-column:1/-1"><div class="bn2">⭐ সেরার সেরা <em>capstone · rare</em></div><p>প্রায় সব ব্যাজের top tier যে ছোঁয় — একটাই, বাকিদের উপরে। alt: <span class="bn">কিংবদন্তি</span>. Rarity line: <span class="bn">«খুব কম শিক্ষার্থী এটা অর্জন করে»</span> (a percentile only if truthful).</p></div>
     </div>
-    <div class="note">Thresholds live in <span class="bn">wrap_tier_config</span> — Product can change any number without an app release; Brand approves the Bangla names. A brand-new badge’s artwork needs a release. (<span class="bn">সেরার সেরা</span> alt name: <span class="bn">কিংবদন্তি</span>.)</div>
+    <div class="decision"><span class="dh">Corrected + needs a Product decision</span>The old site also showed <span class="bn">নিয়মিত উপস্থিতি (৬০–৮৪%)</span> and <span class="bn">কুইজ চ্যাম্পিয়ন (১৫০)</span> — <b>neither exists in the current config.</b> If a second attendance tier or a 150-quiz tier is wanted, add it to <span class="bn">wrap_tier_config</span> (no app release needed) and get the Bangla name brand-approved. Also lock the <b>capstone bar</b> (top tier of all / nearly all badges) and whether a percentile can be stated truthfully.</div>
+  </section>
+
+  <!-- OPEN DECISIONS -->
+  <section class="screen" id="decisions">
+    <div class="shd"><span class="snum gold">!</span><h2>Open decisions — needs Product</h2></div>
+    <p class="sdesc">The calls I couldn’t make for you. Everything else in this brief is either PRD-fixed or yours to design.</p>
+    <ol class="dlist">
+      <li><div><b>Learner-type label set &amp; night-owl data</b><p>Lock the shipping 7 labels + brand wording. Confirm <span class="bn">রাতজাগা পড়ুয়া</span> has reliable hour-band data — if not, drop that axis so it’s never shown as fact. <span class="src">PRD §I · Screen 09</span></p></div></li>
+      <li><div><b>Teacher screen at launch</b><p>Confirm Screen 04 is a P0 launch dependency; otherwise hold it as planned rather than ship thin. <span class="src">PRD §I · Screen 04</span></p></div></li>
+      <li><div><b>Badge tiers beyond the seeded 4</b><p>Decide whether a 60–84% attendance badge and a 150-quiz champion tier should exist — they’re not in the current config. <span class="src">wrap_tier_config · Badges</span></p></div></li>
+      <li><div><b>Rare capstone bar &amp; percentile</b><p>Lock “top tier of all / nearly all badges”, and whether a truthful percentile line can be shown. <span class="src">PRD §I · Screen 10</span></p></div></li>
+      <li><div><b>Multi-program students</b><p>Per-programme content (attendance, teacher) follows the primary programme; totals (hours, days) are student-level. Confirm. <span class="src">PRD §I · O2</span></p></div></li>
+      <li><div><b>Final copy wording</b><p>Product/Brand to approve the revised Bangla — especially dropping the study-time tier compliments, “best day” → “most-active day”, and the 2027/Fresh-Start lines. <span class="src">PRD §H · copy refinement</span></p></div></li>
+      <li><div><b>Marksheet creative direction</b><p>Confirm the latitude to explore notebook-page vs keepsake-certificate, within the fixed privacy + export rules. <span class="src">PRD §G/§I · Screen 10</span></p></div></li>
+    </ol>
   </section>
 
   <!-- RULES -->
   <section class="screen" id="rules">
-    <div class="shd"><span class="snum green">✓</span><h2>Rules for every screen</h2></div>
-    <p class="sdesc">A few things true everywhere, so no single screen has to reinvent them.</p>
+    <div class="shd"><span class="snum green">✓</span><h2>Rules true on every screen</h2></div>
+    <p class="sdesc">So no single screen has to reinvent them.</p>
     <ol class="rules">
-      <li><span class="n">1</span><div><b>Low, even zero → encourage</b><p>Keep the screen, show a warm line. Never a bare “0”, never an empty chart, never a fake badge.</p></div></li>
-      <li><span class="n">2</span><div><b>Data genuinely absent → sit out one slide</b><p>Only that slide (rare). We never guess or fake data.</p></div></li>
-      <li><span class="n">3</span><div><b>Under 5 active days → Fresh Start</b><p>The kind 2-slide deck instead of a hollow full one.</p></div></li>
+      <li><span class="n">1</span><div><b>Honest, not falsely positive</b><p>Low-but-real → show the number plainly, no manufactured praise. A number can stand on its own.</p></div></li>
+      <li><span class="n">2</span><div><b>Thin single metric → drop that one slide</b><p>Below its threshold (min_show) the slide sits out — we never fake or spin it. The student still gets a full flow.</p></div></li>
+      <li><span class="n">3</span><div><b>Under 5 active days → Fresh Start</b><p>The kind 2-slide deck, not a set of hollow stat screens.</p></div></li>
       <li><span class="n">4</span><div><b>No photo → generic avatar</b><p>A clean male/female avatar — never a blank or a wrong face.</p></div></li>
       <li><span class="n">5</span><div><b>Shared image is identity-safe</b><p>No name, photo, school or rank by default — many students are minors.</p></div></li>
-      <li><span class="n">6</span><div><b>Missing/long name, missing value</b><p>Generic headline (never “null”), trim ~18 chars, show “--” (never “0”).</p></div></li>
-      <li><span class="n">7</span><div><b>Bangla-first, motion-safe</b><p>Renders in Bangla with Bengali numerals even in an English app; works fully with motion off.</p></div></li>
-      <li><span class="n">8</span><div><b>Everyone finishes proud</b><p>Best, Good or quiet — lead with effort, never shame a number.</p></div></li>
+      <li><span class="n">6</span><div><b>Missing/long name, missing value</b><p>Generic headline (never “null”), trim long names cleanly, omit empty rows (never “0” / “--”).</p></div></li>
+      <li><span class="n">7</span><div><b>Bangla-first, motion-safe</b><p>Renders in Bangla with Bengali numerals even in an English app; fully works with motion off.</p></div></li>
+      <li><span class="n">8</span><div><b>Accurate to the metric</b><p>Most-active day ≠ “best day”; most-time subject ≠ “strongest”; active days ≠ a streak. Say exactly what the data means.</p></div></li>
     </ol>
   </section>
 
 </div>
-<div class="foot"><span>Shikho · Year-End Wrap ২০২৬ · Screen Guide</span><a href="#top">↑ Top</a></div>
+<div class="foot"><span>Shikho · Year-End Wrap ২০২৬ · Design Brief v2</span><a href="#top">↑ Top</a></div>
 </body></html>
