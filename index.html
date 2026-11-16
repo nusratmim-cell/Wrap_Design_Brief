@@ -260,7 +260,6 @@ a{color:var(--navy);text-decoration:none}
       <a class="tc" href="#sfresh"><span class="num">◇</span><div><b>Fresh Start</b><span>under 5 active days</span></div></a>
       <a class="tc" href="#types"><span class="num">◆</span><div><b>Learner types</b><span>the real set of 7</span></div></a>
       <a class="tc" href="#badges"><span class="num">🏅</span><div><b>Badges</b><span>the real set of 4 + 1</span></div></a>
-      <a class="tc" href="#decisions"><span class="num">!</span><div><b>Open decisions</b><span>needs Product</span></div></a>
     </div>
   </div>
 
@@ -348,7 +347,7 @@ a{color:var(--navy);text-decoration:none}
       <div class="state"><span class="lab mid">Moderate · 71%</span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৪৮</div><div class="unit">টি ক্লাস</div><div class="ey">৬৮টি ক্লাসের মধ্যে</div></div></div><p class="scap"><b>No badge</b> below 85% — we don’t invent one. The count + held is the story.</p></div>
       <div class="state"><span class="lab lim">Limited</span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে তোমার উপস্থিতি</div><div class="big">৬</div><div class="unit">টি ক্লাস</div></div></div><p class="scap">Just the honest count. Below the attendance threshold → the slide drops.</p></div>
     </div>
-    <div class="decision"><span class="dh">Corrected from the old draft</span>The old site showed a <span class="bn">“নিয়মিত উপস্থিতি (৬০–৮৪%)”</span> badge — <b>that tier is not in <span class="bn">wrap_tier_config</span></b>. The only attendance badge is <span class="bn">ফার্স্ট বেঞ্চার</span> at ≥85%. If a mid-tier badge is wanted, it’s a config + brand decision — see <a href="#decisions">Open decisions</a>.</div>
+    <div class="decision"><span class="dh">Corrected from the old draft</span>The old site showed a <span class="bn">“নিয়মিত উপস্থিতি (৬০–৮৪%)”</span> badge — <b>that tier is not in <span class="bn">wrap_tier_config</span></b>. The only attendance badge is <span class="bn">ফার্স্ট বেঞ্চার</span> at ≥85%. If a mid-tier badge is wanted, it’s a config + brand decision.</div>
   </section>
 
   <!-- 04 -->
@@ -585,21 +584,6 @@ a{color:var(--navy);text-decoration:none}
       <div class="bcard cap" style="grid-column:1/-1"><div class="bn2">⭐ সেরার সেরা <em>capstone · rare</em></div><p>প্রায় সব ব্যাজের top tier যে ছোঁয় — একটাই, বাকিদের উপরে। alt: <span class="bn">কিংবদন্তি</span>. Rarity line: <span class="bn">«খুব কম শিক্ষার্থী এটা অর্জন করে»</span> (a percentile only if truthful).</p></div>
     </div>
     <div class="decision"><span class="dh">Corrected + needs a Product decision</span>The old site also showed <span class="bn">নিয়মিত উপস্থিতি (৬০–৮৪%)</span> and <span class="bn">কুইজ চ্যাম্পিয়ন (১৫০)</span> — <b>neither exists in the current config.</b> If a second attendance tier or a 150-quiz tier is wanted, add it to <span class="bn">wrap_tier_config</span> (no app release needed) and get the Bangla name brand-approved. Also lock the <b>capstone bar</b> (top tier of all / nearly all badges) and whether a percentile can be stated truthfully.</div>
-  </section>
-
-  <!-- OPEN DECISIONS -->
-  <section class="screen" id="decisions">
-    <div class="shd"><span class="snum gold">!</span><h2>Open decisions — needs Product</h2></div>
-    <p class="sdesc">The calls I couldn’t make for you. Everything else in this brief is either PRD-fixed or yours to design.</p>
-    <ol class="dlist">
-      <li><div><b>Learner-type label set &amp; night-owl data</b><p>Lock the shipping 7 labels + brand wording. Confirm <span class="bn">রাতজাগা পড়ুয়া</span> has reliable hour-band data — if not, drop that axis so it’s never shown as fact. <span class="src">PRD §I · Screen 09</span></p></div></li>
-      <li><div><b>Teacher screen at launch</b><p>Confirm Screen 04 is a P0 launch dependency; otherwise hold it as planned rather than ship thin. <span class="src">PRD §I · Screen 04</span></p></div></li>
-      <li><div><b>Badge tiers beyond the seeded 4</b><p>Decide whether a 60–84% attendance badge and a 150-quiz champion tier should exist — they’re not in the current config. <span class="src">wrap_tier_config · Badges</span></p></div></li>
-      <li><div><b>Rare capstone bar &amp; percentile</b><p>Lock “top tier of all / nearly all badges”, and whether a truthful percentile line can be shown. <span class="src">PRD §I · Screen 10</span></p></div></li>
-      <li><div><b>Multi-program students</b><p>Per-programme content (attendance, teacher) follows the primary programme; totals (hours, days) are student-level. Confirm. <span class="src">PRD §I · O2</span></p></div></li>
-      <li><div><b>Final copy wording</b><p>Product/Brand to approve the revised Bangla — especially dropping the study-time tier compliments, “best day” → “most-active day”, and the 2027/Fresh-Start lines. <span class="src">PRD §H · copy refinement</span></p></div></li>
-      <li><div><b>Marksheet creative direction</b><p>Confirm the latitude to explore notebook-page vs keepsake-certificate, within the fixed privacy + export rules. <span class="src">PRD §G/§I · Screen 10</span></p></div></li>
-    </ol>
   </section>
 
   <!-- RULES -->
