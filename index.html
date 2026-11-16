@@ -113,6 +113,13 @@ a{color:var(--navy);text-decoration:none}
 
 .foot{max-width:1040px;margin:34px auto 0;padding:18px 22px;border-top:1px solid var(--line);color:var(--faint);font-size:.82rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
+/* badges grid */
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.bcard{border:1px solid var(--line);border-radius:14px;padding:13px 15px;background:var(--ground)}
+.bcard.cap{background:linear-gradient(180deg,#FFF9EA,#FBF1D8);border-color:var(--amber-br)}
+.bcard .bn2{font-family:var(--bn);font-weight:700;color:var(--ink);font-size:1rem}
+.bcard .bn2 em{font-family:var(--ui);font-style:normal;font-size:.68rem;color:var(--amber);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.bcard p{font-family:var(--bn);font-size:.9rem;color:var(--muted);margin-top:3px}
 /* rules list */
 .rules{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 .rules li{display:flex;gap:12px;background:var(--ground);border:1px solid var(--line);border-radius:14px;padding:13px 15px}
@@ -125,6 +132,7 @@ a{color:var(--navy);text-decoration:none}
   .tgrid{grid-template-columns:1fr}
   .states{grid-template-columns:1fr}
   .rules{grid-template-columns:1fr}
+  .bgrid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -187,6 +195,7 @@ a{color:var(--navy);text-decoration:none}
       <a class="tc" href="#s11"><span class="num">11</span><div><b>See you 2027</b><span>warm close</span></div></a>
       <a class="tc" href="#scap"><span class="num">★</span><div><b>Capstone badge</b><span>rare, Best only</span></div></a>
       <a class="tc" href="#sfresh"><span class="num">◇</span><div><b>Fresh Start</b><span>very low activity</span></div></a>
+      <a class="tc" href="#badges"><span class="num">🏅</span><div><b>The badges</b><span>names &amp; thresholds</span></div></a>
       <a class="tc" href="#rules"><span class="num">✓</span><div><b>Rules</b><span>true everywhere</span></div></a>
     </div>
   </div>
@@ -228,7 +237,7 @@ a{color:var(--navy);text-decoration:none}
   <section class="screen" id="s3">
     <div class="shd"><span class="snum">03</span><h2>Live-class attendance</h2></div>
     <p class="sdesc">Reward showing up — a warm count, never a cold percentage.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>classes attended</b> + classes held</div><div><span class="sc">○ Secondary</span> — a badge, if earned (e.g. ফার্স্ট বেঞ্চার)</div></div>
+    <div class="shows"><div><span class="pr">● Primary</span> — <b>classes attended</b> + classes held</div><div><span class="sc">○ Secondary</span> — a badge, if earned: <span class="bn">ফার্স্ট বেঞ্চার</span> (≥৮৫%) or <span class="bn">নিয়মিত উপস্থিতি</span> (৬০–৮৪%)</div></div>
     <div class="states">
       <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে উপস্থিতি</div><div class="big">৬০</div><div class="unit">টি ক্লাস</div><div class="ribbon">🏅 ফার্স্ট বেঞ্চার</div></div></div><p class="scap">High count + an earned badge.</p></div>
       <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">লাইভ ক্লাসে উপস্থিতি</div><div class="big">৪৮</div><div class="unit">টি ক্লাস</div><div class="ribbon">🏅 নিয়মিত উপস্থিতি</div></div></div><p class="scap">Strong count + a badge that fits.</p></div>
@@ -253,7 +262,7 @@ a{color:var(--navy);text-decoration:none}
   <section class="screen" id="s5">
     <div class="shd"><span class="snum">05</span><h2>Quiz activity</h2></div>
     <p class="sdesc">Learning through practice — no pressure, no fake competition.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>total quizzes</b> + an honest line</div><div><span class="sc">○ Secondary</span> — a monthly chart (real data)</div></div>
+    <div class="shows"><div><span class="pr">● Primary</span> — <b>total quizzes</b> + an honest line</div><div><span class="sc">○ Secondary</span> — a monthly chart + the <span class="bn">কুইজ যোদ্ধা</span> badge (১০০+)</div></div>
     <div class="states">
       <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">কুইজে কেমন কাটল বছর?</div><div class="big">৯৫</div><div class="unit">টি কুইজ</div><div class="ey">আর ৫টা হলেই কুইজ যোদ্ধা!</div></div></div><p class="scap">Near a milestone, so we say so.</p></div>
       <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">কুইজে কেমন কাটল বছর?</div><div class="big">৮৭</div><div class="unit">টি কুইজ</div><div class="ey">সারা বছর অনুশীলন চালিয়ে গেছ।</div></div></div><p class="scap">Solid; the nudge only shows if she’s close.</p></div>
@@ -265,7 +274,7 @@ a{color:var(--navy);text-decoration:none}
   <section class="screen" id="s6">
     <div class="shd"><span class="snum">06</span><h2>Video learning</h2></div>
     <p class="sdesc">Make watch time relatable — “here’s what that feels like.” <b>This is the “2-minute” case.</b></p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>total watch time</b></div><div><span class="sc">○ Secondary</span> — a tangible comparison (in hours) + an earned badge</div></div>
+    <div class="shows"><div><span class="pr">● Primary</span> — <b>total watch time</b></div><div><span class="sc">○ Secondary</span> — a tangible comparison (in hours) + the <span class="bn">ভিডিও ম্যারাথনার</span> badge (১৫০০+ মিনিট)</div></div>
     <div class="states">
       <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">ভিডিও দেখে শিখেছ</div><div class="big">১১৮০</div><div class="unit">মিনিট</div><div class="ey">প্রায় ২০ ঘণ্টা ভিডিওতে শেখা!</div></div></div><p class="scap">Big watch time, made tangible in hours.</p></div>
       <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">ভিডিও দেখে শিখেছ</div><div class="big">৯৬০</div><div class="unit">মিনিট</div><div class="ey">প্রায় ১৬ ঘণ্টা ভিডিওতে শেখা!</div></div></div><p class="scap">Plenty of watch time, in hours.</p></div>
@@ -303,7 +312,7 @@ a{color:var(--navy);text-decoration:none}
   <section class="screen" id="s9">
     <div class="shd"><span class="snum alt">09</span><h2>Learner type <span style="color:var(--ring)">★</span></h2><span class="pill" style="background:var(--ring-s);color:var(--ring)">The peak</span></div>
     <p class="sdesc">The signature moment — a personal identity from how they studied. The most shareable screen.</p>
-    <div class="shows"><div><span class="pr">● Primary</span> — <b>the type stamp</b> + a real reason</div><div><span class="sc">○ Secondary</span> — active-days / streak</div></div>
+    <div class="shows"><div><span class="pr">● Primary</span> — <b>the type stamp</b> + a real reason</div><div><span class="sc">○ Secondary</span> — active-days / streak (<span class="bn">স্ট্রিক মাস্টার</span> at ২১+ days)</div></div>
     <div class="states">
       <div class="state best"><span class="lab best">Best <span class="who2">আরিফ</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">একনিষ্ঠ</div><div class="ey">১৮০ দিন নিয়ম করে শিখেছ</div></div></div><p class="scap">A strong type + a real streak.</p></div>
       <div class="state good"><span class="lab good">Good <span class="who2">নিশাত</span></span><div class="mphone"><div class="mscr"><div class="ey">তোমার শেখার ধরন</div><div class="stamp">নিয়মিত পড়ুয়া</div><div class="ey">সারা বছর নিয়ম করে পড়েছ</div></div></div><p class="scap">No type beats another.</p></div>
@@ -359,6 +368,22 @@ a{color:var(--navy);text-decoration:none}
       <div class="state low"><span class="lab low">Slide 2</span><div class="mphone"><div class="mscr"><div class="nm" style="font-size:15px">২০২৭-এ অপেক্ষা করছে<br>নতুন সম্ভাবনা</div><div class="cta">শেখা শুরু করো</div></div></div><p class="scap">An encouraging close + a gentle CTA.</p></div>
       <div class="state good" style="display:flex;flex-direction:column;justify-content:center"><p class="scap" style="margin:0;color:var(--muted)"><b style="color:var(--ink)">Who gets it:</b><br>paid students with under 5 active days (incl. zero). No stats, no charts, no fake progress. Nobody who paid feels left out.</p></div>
     </div>
+  </section>
+
+  <!-- BADGES -->
+  <section class="screen" id="badges">
+    <div class="shd"><span class="snum gold">🏅</span><h2>The badges</h2></div>
+    <p class="sdesc">The full set the Wrap can award. A badge is earned when a metric clears its tier — only the <b>highest tier per metric</b> shows, and there’s never a “locked” shelf.</p>
+    <div class="bgrid">
+      <div class="bcard"><div class="bn2">🏅 ফার্স্ট বেঞ্চার</div><p>লাইভ ক্লাসে উপস্থিতি ≥ ৮৫%</p></div>
+      <div class="bcard"><div class="bn2">🎀 নিয়মিত উপস্থিতি</div><p>উপস্থিতি ৬০–৮৪%</p></div>
+      <div class="bcard"><div class="bn2">🏅 কুইজ যোদ্ধা</div><p>১০০+ কুইজ শেষ</p></div>
+      <div class="bcard"><div class="bn2">🏆 কুইজ চ্যাম্পিয়ন</div><p>১৫০+ কুইজ (top tier)</p></div>
+      <div class="bcard"><div class="bn2">🏅 ভিডিও ম্যারাথনার</div><p>১৫০০+ মিনিট (≈ ২৫ ঘণ্টা) ভিডিও</p></div>
+      <div class="bcard"><div class="bn2">🏅 স্ট্রিক মাস্টার</div><p>টানা ২১+ দিন সক্রিয়</p></div>
+      <div class="bcard cap"><div class="bn2">⭐ সেরার সেরা <em>capstone · rare</em></div><p>প্রায় সব ব্যাজের top tier যে ছোঁয়</p></div>
+    </div>
+    <div class="note">Thresholds live in <span class="bn">wrap_tier_config</span> — Product can change any number without an app release; Brand approves the Bangla names. A brand-new badge’s artwork needs a release. (<span class="bn">সেরার সেরা</span> alt name: <span class="bn">কিংবদন্তি</span>.)</div>
   </section>
 
   <!-- RULES -->
